@@ -158,6 +158,9 @@ nav a {
     
 
 }
+nav a:hover{
+  background-color:#3326be;
+}
 .navbar {
     display:flex;
     align-content: center;
@@ -170,18 +173,43 @@ nav a {
     align-content: center;
     justify-content:start;
     flex-grow: 1;
+    font-size: large;
 
+
+}
+.navbar .searchbar input{
+font-size: large;
+border-radius: 2em;
+border:none;
 }
 .navbar .searchbar input#search{
   flex-grow: .9;
-}
-.navbar .searchbar input#go{
-  flex-grow: .08;
+
+  border-radius: 2em;
+  text-align:justify;
+  color:#606060;
+  padding:1em;
+
+
+  padding-left:2em;
+  background-image: url("img/search-icon.png");
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  background-size: 1em 1em;   
 }
 
-.navbar .searchbar label{
+.navbar .searchbar input#go{
   flex-grow: .08;
+  color:#EEEEEE;
+  background-color:#4231FF;
 }
+
+
+.navbar .searchbar input#go:hover{
+  background-color:#3326be;
+}
+
+
 
 img {
   max-width: 100%;
