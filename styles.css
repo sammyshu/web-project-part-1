@@ -144,16 +144,17 @@ body {
     background-color: #EEEEEE;
 }
 nav a {
-
+display:inline-flex;
     text-decoration: none;
     padding: 0.2em 0.6em;
     color:#EEEEEE;
     background-color: #4231FF;
-    margin: 1em;
-    line-height: 2em;
+      line-height: 1;
+  min-width: 4em;
+justify-content: center;
+align-items: center;
     border-radius: 1em;
     font-size:x-large;
-    
 
     
 
@@ -163,20 +164,28 @@ nav a:hover{
 }
 .navbar {
     display:flex;
-    align-content: center;
+    align-items: center;
     justify-content:start;
     flex-grow: 1;
 
 }
 .navbar .searchbar{
     display:flex;
-    align-content: center;
+    align-items: center;
     justify-content:start;
     flex-grow: 1;
     font-size: large;
+    margin:0;   
 
 
 }
+
+.navbar .searchbar input#go{ flex-grow:0;
+   padding:0 18px; }
+
+
+
+
 .navbar .searchbar input{
 font-size: large;
 border-radius: 2em;
@@ -186,7 +195,7 @@ border:none;
   flex-grow: .9;
 
   border-radius: 2em;
-  text-align:justify;
+  text-align:left;
   color:#606060;
   padding:1em;
 

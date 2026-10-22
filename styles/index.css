@@ -1,22 +1,2 @@
 
-* {
-    font-family: calibri, sans-serif;
-    color: #3D343A; /*same as logo*/
-}
-body {
-
-    background-color: #EEEEEE;
-}
-nav a {
-
-    text-decoration: none;
-    padding: 0.2em 0.6em;
-    color:#EEEEEE;
-    background-color: #4231FF;
-    margin: 10px;
-    line-height: 40px;
-    border-radius: 10px;
-
-}
-
 
