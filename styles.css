@@ -135,19 +135,25 @@
 
 
 /*Sammy (author of index page)*/
+
+:root{
+  
+  --hover_color: #E3EBFA;
+  --logo_blue: #4231FF;
+  --background-color: #EEEEEE;
+}
 * {
     font-family: calibri, sans-serif;
     color: #3D343A; /*same as logo*/
 }
 body {
-
-    background-color: #EEEEEE;
+    background-color: var(--background-color);
 }
 nav a {
 display:inline-flex;
     text-decoration: none;
     padding: 0.2em 0.6em;
-    color:#EEEEEE;
+    color:var(--hover_color);
     background-color: #4231FF;
       line-height: 1;
   min-width: 4em;
@@ -160,22 +166,39 @@ align-items: center;
 
 }
 nav a:hover{
-  background-color:#3326be;
+  background-color:var(--hover_color);
+  color:var(--logo_blue);
 }
+
+
+.navbar .current_page_link {
+  background-color:var(--white);
+  color:var(--logo_blue);
+}
+.navbar .current_page_link:hover {
+  background-color:var(--hover_color);
+  color:var(--logo_blue);
+}
+
 .navbar {
     display:flex;
     align-items: center;
     justify-content:start;
     flex-grow: 1;
+    flex-wrap:wrap;
+    margin:1rem;
+    padding:1rem;
+    background-color:white;
+    border-radius: 30rem;
 
 }
 .navbar .searchbar{
     display:flex;
     align-items: center;
     justify-content:start;
-    flex-grow: 1;
     font-size: large;
-    margin:0;   
+    margin:0 0 0 auto;  
+    
 
 
 }
@@ -189,15 +212,19 @@ nav a:hover{
 .navbar .searchbar input{
 font-size: large;
 border-radius: 2em;
-border:none;
+    border: 2% groove var(--logo_blue);
+
+
 }
 .navbar .searchbar input#search{
-  flex-grow: .9;
-
+  flex-grow: 1;
+  max-width: 30vw;
   border-radius: 2em;
   text-align:left;
   color:#606060;
   padding:1em;
+  padding-right: 2em;
+  margin-right:2em;
 
 
   padding-left:2em;
