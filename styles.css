@@ -171,11 +171,11 @@ nav a:hover{
 }
 
 
-.navbar .current_page_link {
+.navbar a[aria-current="page"] {
   background-color:var(--white);
   color:var(--logo_blue);
 }
-.navbar .current_page_link:hover {
+.navbar  a[aria-current="page"]:hover{
   background-color:var(--hover_color);
   color:var(--logo_blue);
 }
