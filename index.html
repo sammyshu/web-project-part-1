@@ -1,38 +1,140 @@
+
+<!DOCTYPE html>
+<!-- 
+     index.html (home page)
+     COS10026 Web Technology Project, Group 7
+-->
+<html lang="en">
 <html>
     <head>
         <meta charset="UTF-8"/>
         <meta name = "description" content="Sports & Fitness Main Page">
         <meta name="author" content="Group 7"/>
-        <title>Company Name</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="styles/index.css">
+        <style>
+:root{
+    --padding:  clamp(2.5rem, 6vw, 5rem) clamp(1.5rem, 5vw, 4rem);
+}
+.hero-section {
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    border-radius: 32px;
+    padding: var(--padding);
+    margin: 0 auto;
+    max-width: 1100px;
+    color: #fff;
+    background:
+        radial-gradient(circle at 20% 0%, #7b6dff 0%, transparent 50%),
+        radial-gradient(circle at 90% 100%, #1a0f9e 0%, transparent 55%),
+        #4231ff;
+    box-shadow:
+        0 20px 50px -15px rgba(66, 49, 255, 0.55),
+        inset 0 1px 0 rgba(255, 255, 255, 0.25);
+
+}
+
+
+.hero-title {
+    
+    
+    margin: 0 0 1rem;
+    font-size: clamp(2.25rem, 6vw, 4.5rem);
+    line-height: 1.05;
+    letter-spacing: -0.06em;
+    font-weight: 800;
+    background: linear-gradient(180deg, #ffffff 30%, #c9c4ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+            .product {
+                padding: 2vw;
+                margin: 0;
+                text-align: center;
+                justify-items: flex-start;
+                background-color: #ffffff;
+                border: 1px solid #e0e0e0;
+                border-radius: 50px;      
+                box-shadow: 0 0.5vw 1vw #4231ff40;
+                transition: transform 0.2s ease, box-shadow 0.2s ease;
+            }
+
+            .product:hover {
+                transform: translateY(.3em);
+                box-shadow: 0 1vw 2vw #4231ff66;
+            }
+            .products_list{
+                box-sizing: border-box;      
+                display:flex;
+                max-width: 1100px;
+                justify-content: center;
+                margin: 0 auto;
+
+            }
+            .subtitle{
+                background: linear-gradient(180deg, black, 70%,#4231ff); 
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+               text-align: center;
+            }
+        </style>
+        <title>MatchFit Sports</title>
     </head>
     <body>
         <header>
-            <img src="img/logo.png.png" alt="logo" width="400">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="jobs.html">Jobs</a></li>
-                    <li><a href="apply.html">Apply</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><form>
-                        <label for="search">Search</label>
-                        <input type="text" id="search" name="search" />
-                        <input type="submit" value="Go">
-                    </form></li>
-                </ul>
+            <nav class="navbar">
+                    <img src="img/logo.png" alt="logo" width="100">
+
+                    <a href="index.html" aria-current="page">Home</a>
+                    <a href="jobs.html">Jobs</a>
+                    <a href="apply.html">Apply</a>
+                    <a href="about.html">About</a>
+                    <form class = "searchbar">
+                        
+                        <!-- <label for="search"><img src="img/search-icon.png" alt="logo" width="50"/></label>> -->
+                        <input type="text" id="search" name="search" placeholder="Search for something..." />
+                        <input type="submit" id ="go" value="Go"/>
+                    </form>
             </nav>
         </header>
+        <div class="hero-section">
+            <h1 class = "hero-title" >MatchFit Sports</h1>
+            <h2 style="font-size: 2em; color:blue; font-style:italic">Gear Up. Go Beyond.</h2>
+            <p id="description_paragraph" style="color:white;">MatchFit Sports is Qatar's premier community sports organization, 
+                developing club membership systems, event registration platforms,
+                and fitness tracking apps, for members, coaches, and clubs to stay 
+                integrated with the technological world.</p>
+                
+                <a href="about.html">Apply for a job</a>
 
-        <h1>Company Name</h1>
-        <h2>Our Slogan.</h2>
-        <p id="description_paragraph">Our business is about... (Description here)</p>
-
+        </div>
+        
+        <h1 class = "subtitle">Our Products:</h1>
+        <div class = "products_list">
+            <div class = "product">
+                <h2 class = "subtitle">ClubHub</h2>
+                <p>ClubHub is an all-in-one club management system that lets organizations handle memberships, schedules, and communication in one place.</p>
+            </div>      
+            <div class = "product">
+                <h2 class = "subtitle">EventReg</h2>
+                <p>EventReg simplifies sports event registration, allowing clubs to create tournaments and members to sign up in just a few clicks.</p>
+            </div>         
+            <div class = "product">
+                <h2 class = "subtitle">FiTrack</h2>
+                <p>FiTrack helps members and coaches monitor workouts, track fitness goals, and view progress through easy-to-read dashboards.</p>
+            </div>
+        </div>
         <footer>
             <nav>
-                <ul>
-                    <li><a href="">Jira</a></li>
-                    <li><a href="https://github.com/sammyshu/web-project-part-1">Github</a></li>
-                    <li><a href="mailto:info@companyname.com">Email</a></li>
+                <ul class = "contact">
+                    <a href="">Jira</a>
+                    <a href="https://github.com/sammyshu/web-project-part-1">Github</a>
+                    <a href="mailto:info@companyname.com">Email</a>
                 </ul>
             </nav>
             <p>&copy; 2026 My Website. All rights reserved.</p>
