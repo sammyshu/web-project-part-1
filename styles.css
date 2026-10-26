@@ -1,134 +1,69 @@
-/* =========================================================
-   APPLY PAGE - MAYASA
-   ========================================================= */
+/* --- Layout Container --- */
+.container {
+  max-width: 1100px; 
+  margin: 0 auto;
+  padding: 2rem 1.5rem; 
+}
 
-/* Form layout using CSS Grid (Required by the brief) */
+/* --- Form Layout --- */
 .apply-form {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.25rem 1.5rem;
-  max-width: 900px;
-  margin-top: 1rem;
-  padding: 1.5rem;
-  background: #FFFFFF;
-  border: 2px solid #E8EEF4;
-  border-left: 6px solid #E85D04; /* Orange accent border */
-  border-radius: 10px;
+  grid-template-columns: 1fr 1fr; 
+  gap: 1.5rem; 
+  margin-top: 2rem;
+  background: #f9f9f9; 
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
 }
 
-/* Each field stacks label above input */
-.form-field {
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-}
-
-/* Fields that span the full width (Street, Gender, Skills) */
-.form-field--full { 
+.form-field--full,
+.form-actions {
   grid-column: 1 / -1; 
 }
 
-.apply-form label {
-  font-weight: 600;
-  color: #0D1B2A;
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-/* Styling for all inputs, dropdowns, and textareas */
-.apply-form input[type="text"],
-.apply-form input[type="email"],
-.apply-form input[type="tel"],
-.apply-form select,
-.apply-form textarea {
-  padding: 0.6rem 0.75rem;
-  font: inherit;
-  color: #1B2733;
-  background: #FFFFFF;
-  border: 2px solid #7A8899;
-  border-radius: 6px;
+.form-field input,
+.form-field select,
+.form-field textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+  width: 100%; 
+  box-sizing: border-box;
 }
 
-/* Focus state for accessibility (turns orange when clicked) */
-.apply-form input[type="text"]:focus,
-.apply-form input[type="email"]:focus,
-.apply-form input[type="tel"]:focus,
-.apply-form select:focus,
-.apply-form textarea:focus {
-  border-color: #C2410C;
-  outline: none;
+/* --- Text Alignment --- */
+.apply-intro,
+.privacy-note,
+.next-steps {
+  max-width: 75ch;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.apply-form textarea {
-  min-height: 7rem;
-  resize: vertical;
+.required-note {
+  font-size: 0.95rem;
+  color: #4A5A6A;
 }
 
-/* Fieldsets for radio buttons and checkboxes */
-.apply-form fieldset {
-  margin: 0;
-  padding: 0.9rem 1rem 1rem;
-  border: 2px solid #E8EEF4;
-  border-radius: 10px;
-}
-
-.apply-form legend {
-  padding: 0 0.4rem;
-  font-weight: 700;
-  color: #0D1B2A;
-}
-
-/* Radio and Checkbox row layout */
 .choice-group {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem 1.5rem;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
 }
 
 .choice-group label {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-weight: 400;
-}
-
-.choice-group input {
-  width: 1.15rem;
-  height: 1.15rem;
-  accent-color: #C2410C; /* Makes the checkbox/radio orange */
-}
-
-/* Submit Button Area */
-.form-actions {
-  grid-column: 1 / -1;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  padding-top: 0.5rem;
-}
-
-/* Submit Button Styling (Matches your header) */
-.btn {
-  display: inline-block;
-  padding: 0.75rem 1.6rem;
-  border: 2px solid transparent;
-  border-radius: 8px;
-  font-weight: 700;
-  text-decoration: none;
   cursor: pointer;
 }
-
-.btn-primary {
-  background: #C2410C;
-  color: #FFFFFF;
-}
-
-.btn-primary:hover { 
-  background: #0D1B2A; /* Turns navy blue when hovered */
-}
-
-/* Mobile Responsiveness (Stacks form into 1 column on small screens) */
-@media (max-width: 760px) {
-  .apply-form {
-    grid-template-columns: 1fr;
-    padding: 1rem;
-  }
-} 

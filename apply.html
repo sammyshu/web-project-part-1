@@ -15,10 +15,6 @@
       color: #C2410C;
       font-weight: 700;
     }
-    .apply-intro,
-    .privacy-note {
-      max-width: 75ch;
-    }
     .logo-img {
       max-height: 60px;
       width: auto;
@@ -31,13 +27,10 @@
 
   <header class="site-header">
     <div class="header-inner">
-
       <a class="logo-link" href="index.html">
         <img src="img/logo.png.png" alt="MatchFit Sports & Fitness Network logo" class="logo-img">
       </a>
-
       <p class="slogan"><em>Gear Up. Go Beyond.</em></p>
-
       <nav class="main-nav" aria-label="Main navigation">
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -46,195 +39,195 @@
           <li><a href="about.html">About</a></li>
         </ul>
       </nav>
-
     </div>
   </header>
 
   <main id="main-content">
+    <div class="container">
 
-    <section class="apply-intro" aria-labelledby="apply-heading">
-      <h1 id="apply-heading">Apply to join MatchFit</h1>
-      <p>Use this form to apply for any current vacancy. Your reference number is
-         shown on each job advertisement &mdash; you can find it on our
-         <a href="jobs.html">Jobs page</a>.</p>
+      <section class="apply-intro" aria-labelledby="apply-heading">
+        <h1 id="apply-heading">Apply to join MatchFit</h1>
+        <p>Use this form to apply for any current vacancy. Your reference number is
+           shown on each job advertisement &mdash; you can find it on our
+           <a href="jobs.html">Jobs page</a>.</p>
 
-      <p style="font-size: 0.95rem; color: #4A5A6A;">
-        Fields marked <span class="required" aria-hidden="true">*</span> are required.
-      </p>
-    </section>
+        <p class="required-note">
+          Fields marked <span class="required" aria-hidden="true">*</span> are required.
+        </p>
+      </section>
 
-    <section aria-labelledby="form-heading">
-      <h2 id="form-heading">Application form</h2>
+      <section aria-labelledby="form-heading">
+        <h2 id="form-heading">Application form</h2>
 
-      <p class="privacy-note">We collect the information on this form only to
-         assess your application. It is stored securely, not shared with third
-         parties, and deleted after 12 months. If you have questions about how
-         your information is handled, contact
-         <a href="mailto:careers@matchfit.com.au">careers@matchfit.com.au</a>.</p>
+        <p class="privacy-note">We collect the information on this form only to
+           assess your application. It is stored securely, not shared with third
+           parties, and deleted after 12 months. If you have questions about how
+           your information is handled, contact
+           <a href="mailto:careers@matchfit.com.au">careers@matchfit.com.au</a>.</p>
 
-      <form class="apply-form"
-            action="https://mercury.swin.edu.au/it000000/formtest.php"
-            method="post">
+        <form class="apply-form"
+              action="https://mercury.swin.edu.au/it000000/formtest.php"
+              method="post">
 
-        <div class="form-field">
-          <label for="job-ref">Job reference number
-            <span class="required" aria-hidden="true">*</span></label>
-          <input type="text" id="job-ref" name="job_ref"
-                 required maxlength="5" pattern="[A-Za-z0-9]{5}"
-                 title="Exactly 5 letters or numbers, for example MF204"
-                 placeholder="e.g. MF204" autocomplete="off">
-        </div>
-
-        <div class="form-field">
-          <label for="first-name">First name
-            <span class="required" aria-hidden="true">*</span></label>
-          <input type="text" id="first-name" name="first_name"
-                 required maxlength="20" pattern="[A-Za-z]{1,20}"
-                 title="Letters only, up to 20 characters"
-                 autocomplete="given-name">
-        </div>
-
-        <div class="form-field">
-          <label for="last-name">Last name
-            <span class="required" aria-hidden="true">*</span></label>
-          <input type="text" id="last-name" name="last_name"
-                 required maxlength="20" pattern="[A-Za-z]{1,20}"
-                 title="Letters only, up to 20 characters"
-                 autocomplete="family-name">
-        </div>
-
-        <div class="form-field">
-          <label for="dob">Date of birth (dd/mm/yyyy)
-            <span class="required" aria-hidden="true">*</span></label>
-          <input type="text" id="dob" name="dob"
-                 required
-                 pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/[0-9]{4}"
-                 placeholder="dd/mm/yyyy"
-                 title="Enter your date of birth as dd/mm/yyyy, for example 07/03/1998">
-        </div>
-
-        <fieldset class="form-field form-field--full">
-          <legend>Gender <span class="required" aria-hidden="true">*</span></legend>
-          <div class="choice-group">
-            <label><input type="radio" name="gender" value="male" required>
-              Male</label>
-            <label><input type="radio" name="gender" value="female">
-              Female</label>
+          <div class="form-field">
+            <label for="job-ref">Job reference number
+              <span class="required" aria-hidden="true">*</span></label>
+            <input type="text" id="job-ref" name="job_ref"
+                   required maxlength="5" pattern="[A-Za-z0-9]{5}"
+                   title="Exactly 5 letters or numbers, for example MF204"
+                   placeholder="e.g. MF204" autocomplete="off">
           </div>
-        </fieldset>
 
-        <div class="form-field form-field--full">
-          <label for="street">Street address
-            <span class="required" aria-hidden="true">*</span></label>
-          <input type="text" id="street" name="street"
-                 required maxlength="40"
-                 autocomplete="address-line1">
-        </div>
-
-        <div class="form-field">
-          <label for="suburb">Suburb or town
-            <span class="required" aria-hidden="true">*</span></label>
-          <input type="text" id="suburb" name="suburb"
-                 required maxlength="40"
-                 autocomplete="address-level2">
-        </div>
-
-        <div class="form-field">
-          <label for="state">State
-            <span class="required" aria-hidden="true">*</span></label>
-          <select id="state" name="state" required autocomplete="address-level1">
-            <option value="">Select a state</option>
-            <option value="VIC">VIC</option>
-            <option value="NSW">NSW</option>
-            <option value="QLD">QLD</option>
-            <option value="NT">NT</option>
-            <option value="WA">WA</option>
-            <option value="SA">SA</option>
-            <option value="TAS">TAS</option>
-            <option value="ACT">ACT</option>
-          </select>
-        </div>
-
-        <div class="form-field">
-          <label for="postcode">Postcode
-            <span class="required" aria-hidden="true">*</span></label>
-          <input type="text" id="postcode" name="postcode"
-                 required maxlength="4" inputmode="numeric"
-                 pattern="[0-9]{4}"
-                 title="Exactly 4 digits, for example 3000"
-                 autocomplete="postal-code">
-        </div>
-
-        <div class="form-field">
-          <label for="email">Email address
-            <span class="required" aria-hidden="true">*</span></label>
-          <input type="email" id="email" name="email"
-                 required placeholder="you@example.com"
-                 autocomplete="email">
-        </div>
-
-        <div class="form-field">
-          <label for="phone">Phone number
-            <span class="required" aria-hidden="true">*</span></label>
-          <input type="tel" id="phone" name="phone"
-                 required inputmode="numeric"
-                 pattern="[0-9]{8,12}"
-                 title="Enter 8 to 12 digits with no spaces or symbols, for example 0412345678"
-                 autocomplete="tel">
-        </div>
-
-        <fieldset class="form-field form-field--full">
-          <legend>Skills <span class="required" aria-hidden="true">*</span></legend>
-          <div class="choice-group">
-            <label><input type="checkbox" name="skills" value="html-css">
-              HTML and CSS</label>
-            <label><input type="checkbox" name="skills" value="javascript">
-              JavaScript</label>
-            <label><input type="checkbox" name="skills" value="ui-design">
-              UI and UX design</label>
-            <label><input type="checkbox" name="skills" value="database">
-              Database and SQL</label>
-            <label><input type="checkbox" name="skills" value="content">
-              Content writing</label>
-            <label><input type="checkbox" name="skills" value="project-management">
-              Project management</label>
+          <div class="form-field">
+            <label for="first-name">First name
+              <span class="required" aria-hidden="true">*</span></label>
+            <input type="text" id="first-name" name="first_name"
+                   required maxlength="20" pattern="[A-Za-z]{1,20}"
+                   title="Letters only, up to 20 characters"
+                   autocomplete="given-name">
           </div>
-        </fieldset>
 
-        <div class="form-field form-field--full">
-          <label for="other-skills">Other skills or experience
-            (optional)</label>
-          <textarea id="other-skills" name="other_skills" rows="4"
-                    placeholder="Tell us about any other skills, qualifications or experience relevant to this role."></textarea>
-        </div>
+          <div class="form-field">
+            <label for="last-name">Last name
+              <span class="required" aria-hidden="true">*</span></label>
+            <input type="text" id="last-name" name="last_name"
+                   required maxlength="20" pattern="[A-Za-z]{1,20}"
+                   title="Letters only, up to 20 characters"
+                   autocomplete="family-name">
+          </div>
 
-        <div class="form-actions">
-          <button type="submit" class="btn btn-primary">Submit application</button>
-        </div>
+          <div class="form-field">
+            <label for="dob">Date of birth (dd/mm/yyyy)
+              <span class="required" aria-hidden="true">*</span></label>
+            <input type="text" id="dob" name="dob"
+                   required
+                   pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/[0-9]{4}"
+                   placeholder="dd/mm/yyyy"
+                   title="Enter your date of birth as dd/mm/yyyy, for example 07/03/1998">
+          </div>
 
-      </form>
-    </section>
+          <fieldset class="form-field form-field--full">
+            <legend>Gender <span class="required" aria-hidden="true">*</span></legend>
+            <div class="choice-group">
+              <label><input type="radio" name="gender" value="male" required>
+                Male</label>
+              <label><input type="radio" name="gender" value="female">
+                Female</label>
+            </div>
+          </fieldset>
 
-    <section aria-labelledby="next-heading">
-      <h2 id="next-heading">What happens next</h2>
-      <ol>
-        <li>We acknowledge your application within two business days.</li>
-        <li>Shortlisted applicants have a 20-minute phone conversation.</li>
-        <li>Final interviews are held at our Doha office or online.</li>
-        <li>All applicants receive an outcome, successful or not.</li>
-      </ol>
-      <p>If you need adjustments at any stage of the process, or would like to
-         discuss cultural safety during recruitment, email
-         <a href="mailto:careers@matchfit.com.qa">careers@matchfit.com.qa</a>.
-         We welcome applications from Aboriginal and Torres Strait Islander
-         people for every role we advertise.</p>
-    </section>
+          <div class="form-field form-field--full">
+            <label for="street">Street address
+              <span class="required" aria-hidden="true">*</span></label>
+            <input type="text" id="street" name="street"
+                   required maxlength="40"
+                   autocomplete="address-line1">
+          </div>
 
+          <div class="form-field">
+            <label for="suburb">Suburb or town
+              <span class="required" aria-hidden="true">*</span></label>
+            <input type="text" id="suburb" name="suburb"
+                   required maxlength="40"
+                   autocomplete="address-level2">
+          </div>
+
+          <div class="form-field">
+            <label for="state">State
+              <span class="required" aria-hidden="true">*</span></label>
+            <select id="state" name="state" required autocomplete="address-level1">
+              <option value="">Select a state</option>
+              <option value="VIC">VIC</option>
+              <option value="NSW">NSW</option>
+              <option value="QLD">QLD</option>
+              <option value="NT">NT</option>
+              <option value="WA">WA</option>
+              <option value="SA">SA</option>
+              <option value="TAS">TAS</option>
+              <option value="ACT">ACT</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="postcode">Postcode
+              <span class="required" aria-hidden="true">*</span></label>
+            <input type="text" id="postcode" name="postcode"
+                   required maxlength="4" inputmode="numeric"
+                   pattern="[0-9]{4}"
+                   title="Exactly 4 digits, for example 3000"
+                   autocomplete="postal-code">
+          </div>
+
+          <div class="form-field">
+            <label for="email">Email address
+              <span class="required" aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email"
+                   required placeholder="you@example.com"
+                   autocomplete="email">
+          </div>
+
+          <div class="form-field">
+            <label for="phone">Phone number
+              <span class="required" aria-hidden="true">*</span></label>
+            <input type="tel" id="phone" name="phone"
+                   required inputmode="numeric"
+                   pattern="[0-9]{8,12}"
+                   title="Enter 8 to 12 digits with no spaces or symbols, for example 0412345678"
+                   autocomplete="tel">
+          </div>
+
+          <fieldset class="form-field form-field--full">
+            <legend>Skills <span class="required" aria-hidden="true">*</span></legend>
+            <div class="choice-group">
+              <label><input type="checkbox" name="skills" value="html-css">
+                HTML and CSS</label>
+              <label><input type="checkbox" name="skills" value="javascript">
+                JavaScript</label>
+              <label><input type="checkbox" name="skills" value="ui-design">
+                UI and UX design</label>
+              <label><input type="checkbox" name="skills" value="database">
+                Database and SQL</label>
+              <label><input type="checkbox" name="skills" value="content">
+                Content writing</label>
+              <label><input type="checkbox" name="skills" value="project-management">
+                Project management</label>
+            </div>
+          </fieldset>
+
+          <div class="form-field form-field--full">
+            <label for="other-skills">Other skills or experience
+              (optional)</label>
+            <textarea id="other-skills" name="other_skills" rows="4"
+                      placeholder="Tell us about any other skills, qualifications or experience relevant to this role."></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Submit application</button>
+          </div>
+
+        </form>
+      </section>
+
+      <section class="next-steps" aria-labelledby="next-heading">
+        <h2 id="next-heading">What happens next</h2>
+        <ol>
+          <li>We acknowledge your application within two business days.</li>
+          <li>Shortlisted applicants have a 20-minute phone conversation.</li>
+          <li>Final interviews are held at our Doha office or online.</li>
+          <li>All applicants receive an outcome, successful or not.</li>
+        </ol>
+        <p>If you need adjustments at any stage of the process, or would like to
+           discuss cultural safety during recruitment, email
+           <a href="mailto:careers@matchfit.com.qa">careers@matchfit.com.qa</a>.
+           We welcome applications from Aboriginal and Torres Strait Islander
+           people for every role we advertise.</p>
+      </section>
+
+    </div>
   </main>
 
   <footer class="site-footer">
     <div class="footer-inner">
-
       <div>
         <h2 class="footer-heading">Project links</h2>
         <ul class="footer-links">
@@ -247,7 +240,6 @@
           <li><a href="mailto:info@matchfit.com.qa">info@matchfit.com.qa</a></li>
         </ul>
       </div>
-
       <div>
         <h2 class="footer-heading">Contact us</h2>
         <address>
@@ -257,9 +249,7 @@
           <a href="mailto:careers@matchfit.com.qa">careers@matchfit.com.qa</a>
         </address>
       </div>
-
     </div>
-
     <p class="copyright">
       &copy; 2026 MatchFit Sports &amp; Fitness Network. Group 7, COS10026.
     </p>
