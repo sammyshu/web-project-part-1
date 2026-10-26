@@ -188,8 +188,17 @@ nav a:hover{
     flex-wrap:wrap;
     margin:1rem;
     padding:1rem;
-    background-color:white;
-    border-radius: 30rem;
+    /*background-color:white;*/
+    border-radius: 2rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, size 0.2s ease;
+
+
+
+}
+.navbar:hover {
+    box-shadow: 0 1vw 2vw #4231ff66;
+
+
 
 }
 .navbar .searchbar{
@@ -202,6 +211,7 @@ nav a:hover{
 
 
 }
+
 
 .navbar .searchbar input#go{ flex-grow:0;
    padding:0 18px; }
@@ -245,7 +255,10 @@ border-radius: 2em;
   background-color:#3326be;
 }
 
-
+.contact{
+  display:flex;
+  justify-content: center;
+}
 
 img {
   max-width: 100%;
