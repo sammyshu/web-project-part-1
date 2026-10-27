@@ -36,10 +36,10 @@
            <nav class="navbar">
                     <img src="img/logo.png" alt="logo" width="100">
 
-                    <a href="index.html" aria-current="page">Home</a>
+                    <a href="index.html" >Home</a>
                     <a href="jobs.html">Jobs</a>
                     <a href="apply.html">Apply</a>
-                    <a href="about.html">About</a>
+                    <a href="about.html" aria-current="page">About</a>
                     <form class = "searchbar">
                         
                         <!-- <label for="search"><img src="img/search-icon.png" alt="logo" width="50"/></label>> -->
@@ -57,7 +57,7 @@
             <!--
                 below must be nested list
             -->
-            <section aria-labelledby="group-heading">
+            <section aria-labelledby="group-heading"> <!--We need a label-->
                 <h2 id="group-heading">Group details</h2>
                 <ul>
                     <li><strong>Group:</strong> TODO: group name
@@ -73,7 +73,7 @@
             Group photo: all groupmembers
             -->
             <figure class="group-photo">
-                <img src="img/TODO-group-photo.jpg" alt="A photo of Group 7 all together"
+                <img src="img/TODO-group-photo.jpg" alt="A photo of Group 7 all together">
                      width="640" height="360"/>
             </figure>
 
@@ -84,6 +84,7 @@
             speakers have to put a quote in another language they like.
                     Lang attribute is for accesibility
             -->
+                    <!--aria-labelledby is for accessibility. We should put it in all the sections—  take note.... -->
             <section aria-labelledby="members-heading">
                 <h2 id="members-heading">Contributions</h2>
                 <dl>
@@ -104,8 +105,8 @@
             Table, has to be about fun facts
             -->
 
-            <section>
-                <h2>table heading</h2>
+            <section aria-labelledby="table-heading"> 
+                <h2 id == "table-heading">table heading</h2>
                 <table class="fun-facts">
                     <caption>Getting to know Group 7 (or some other caption)</caption>
                     <thead>
@@ -132,11 +133,7 @@
         </main>
 
         <!--
-        Common footer — must match the other pages. TODO: the group still
-        needs to put the real Jira board URL and the GitHub Pages live link
-        here on every page (the brief requires both in the footer).
-        The Acknowledgement of Country element lives on the jobs and apply
-        pages, so it is not repeated here.
+sammy jobsame footer
         -->
         <footer>
             <p>Copy the footer from index.html once fully complete</p>
