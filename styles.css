@@ -171,13 +171,11 @@
   transition: all 0.3s ease;
   box-shadow: 0 5px 15px rgba(66, 49, 255, 0.4);
 }
-
 .btn-primary:hover { 
-  background: #3326be /* Turns navy blue when hovered */
+  background: #3326be; /* Turns navy blue when hovered */
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(66, 49, 255, 0.5);
 }
-
 .next-steps {
   margin-top: 4rem;
   text-align: center;
