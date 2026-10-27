@@ -8,6 +8,202 @@
   <meta name="author" content="YOUR NAME, Group G07">
   <link rel="stylesheet" href="styles.css">
   <title>Jobs | MatchFit</title>
+  <style>
+
+/* ===== MATCHFIT JOBS PAGE ===== */
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f8;
+    margin: 0;
+    padding: 0;
+    color: #222;
+}
+
+/* Main content container */
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 40px;
+}
+*:not(h3) {
+  font-size: 1.25rem;
+}
+/* Hero section */
+main > h1 {
+    background: linear-gradient(135deg,#6557ff,#2818c7);
+    color: white;
+    padding: 40px;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 48px;
+    box-shadow: 0 15px 40px rgba(72,52,212,0.35);
+    margin-bottom: 25px;
+}
+
+main > p:first-of-type {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* Section titles */
+h2 {
+    color: #2818c7;
+    font-size: 2rem;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    border-left: 6px solid #4f46ff;
+    padding-left: 15px;
+}
+
+/* Job cards */
+article {
+    background: white;
+    padding: 35px;
+    margin-bottom: 35px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    border-top: 6px solid #4f46ff;
+}
+
+article:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(76,70,255,0.2);
+}
+
+/* Job titles */
+article h3 {
+    color: #2c2c8d;
+    font-size: 30px;
+    margin-top: 0;
+}
+
+/* Subheadings */
+h4 {
+    color: #4f46ff;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+/* Lists */
+ul {
+    padding-left: 25px;
+}
+
+li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+/* Reference number */
+.ref-number {
+    color: #ff6b35;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* Salary / details styling */
+dl {
+    background: #f8f8ff;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px 0;
+}
+
+dt {
+    font-weight: bold;
+    color: #2818c7;
+}
+
+dd {
+    margin-bottom: 12px;
+    margin-left: 0;
+}
+
+/* Apply button */
+article p a[href*="apply"] {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 28px;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(135deg,#5b50ff,#2a18d3);
+    border-radius: 999px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+article a[href*="apply"]:hover {
+    background: linear-gradient(135deg,#2a18d3,#180cb5);
+    transform: scale(1.05);
+}
+
+/* Intro notice */
+strong {
+    color: #2818c7;
+}
+
+/* Accessibility focus */
+a:focus,
+button:focus {
+    outline: 3px solid #ff6b35;
+    outline-offset: 3px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    main {
+        padding: 20px;
+    }
+
+    main > h1 {
+        font-size: 36px;
+        padding: 30px;
+    }
+
+    article {
+        padding: 25px;
+    }
+
+    article h3 {
+        font-size: 24px;
+    }
+}
+
+article {
+    position: relative;
+    overflow: hidden;
+}
+
+article::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(
+        90deg,
+        #6d5dfc,
+        #3d2cff,
+        #6d5dfc
+    );
+}
+/* Centre all apply buttons */
+article p a[href*="apply"] {
+    display: block;
+    width: fit-content;
+    margin: 25px auto;
+    padding: 14px 28px;
+}
+
+
+  </style>
 
   <!--
     Page: jobs.html
@@ -28,19 +224,23 @@
 </head>
 
 <body>
-  <a class="skip-link" href="#main">Skip to main content</a>
 
   <!-- Header and menu: copy this block to every page -->
   <header>
-    <a class="logo" href="index.html">MatchFit</a>
-    <nav aria-label="Main menu">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="jobs.html" aria-current="page">Jobs</a></li>
-        <li><a href="apply.html">Apply</a></li>
-        <li><a href="about.html">About</a></li>
-      </ul>
-    </nav>
+<nav class="navbar">
+                    <img src="img/logo.png" alt="logo" width="100">
+
+                    <a href="index.html" aria-current="page">Home</a>
+                    <a href="jobs.html">Jobs</a>
+                    <a href="apply.html">Apply</a>
+                    <a href="about.html">About</a>
+                    <form class = "searchbar">
+                        
+                        <!-- <label for="search"><img src="img/search-icon.png" alt="logo" width="50"/></label>> -->
+                        <input type="text" id="search" name="search" placeholder="Search for something..." />
+                        <input type="submit" id ="go" value="Go"/>
+                    </form>
+            </nav>
   </header>
 
   <!-- Banner at the top of the page -->
