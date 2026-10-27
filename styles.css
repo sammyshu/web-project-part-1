@@ -1,128 +1,192 @@
-/* =========================================================
-   APPLY PAGE - MAYASA
-   ========================================================= */
+/*mayasa css */  /* --- Layout Container --- */
+.container {
+  max-width: 1100px; 
+  margin: 0 auto;
+  padding: 2rem 1.5rem; 
+}
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  max-width: 1200px; 
+  margin: 0 auto;
+}
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem; 
+  padding: 0;
+  margin: 0;
+}
+.logo-img {
+  max-height: 50px; 
+  width: auto;
+}
+.apply-intro {
+ background: linear-gradient(135deg, #7b6dff, #1a0f9e);
+ color: #ffffff;
+  padding: 4rem 2rem; 
+  border-radius: 24px;
+  text-align: center;
+  margin-bottom: 3rem;
+  box-shadow: 0 10px 30px rgba(66, 49, 255, 0.3);
+ 
+}
+.apply-intro h1 {
+  font-size: 2.5rem; 
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+.apply-intro a {
+  color: #c9c4ff;
+  text-decoration: underline;
 
-/* Form layout using CSS Grid (Required by the brief) */
+}
+/* --- Form Layout --- */
 .apply-form {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.25rem 1.5rem;
-  max-width: 900px;
-  margin-top: 1rem;
-  padding: 1.5rem;
-  background: #FFFFFF;
-  border: 2px solid #E8EEF4;
-  border-left: 6px solid #E85D04; /* Orange accent border */
-  border-radius: 10px;
+  grid-template-columns: 1fr 1fr; 
+  gap: 1.5rem; 
+  margin-top: 2rem;
+  background: #ffffff; 
+  padding: 3rem;
+  border-radius: 20px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 15px 35px rgba(66, 49, 255, 0.08);
 }
 
-/* Each field stacks label above input */
-.form-field {
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-}
-
-/* Fields that span the full width (Street, Gender, Skills) */
-.form-field--full { 
+.form-field--full,
+.form-actions {
   grid-column: 1 / -1; 
 }
 
-.apply-form label {
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.form-field label,
+.form-field legend {
   font-weight: 600;
-  color: #0D1B2A;
+  color: #4321ff;
+  font-size: o.95rem;
 }
 
-/* Styling for all inputs, dropdowns, and textareas */
-.apply-form input[type="text"],
-.apply-form input[type="email"],
-.apply-form input[type="tel"],
-.apply-form select,
-.apply-form textarea {
-  padding: 0.6rem 0.75rem;
-  font: inherit;
-  color: #1B2733;
-  background: #FFFFFF;
-  border: 2px solid #7A8899;
-  border-radius: 6px;
-}
+  
 
-/* Focus state for accessibility (turns orange when clicked) */
-.apply-form input[type="text"]:focus,
-.apply-form input[type="email"]:focus,
-.apply-form input[type="tel"]:focus,
-.apply-form select:focus,
-.apply-form textarea:focus {
-  border-color: #C2410C;
+.form-field input,
+.form-field select,
+.form-field textarea {
+  padding: 0.85rem 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 1rem;
+  width: 100%; 
+  box-sizing: border-box;
+  background-color: #fcfcfc;
+  color: #3D343A;
+  transition: all 0.3s ease;
+}
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
   outline: none;
+  border-color: #4321ff;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(66, 49, 255, 0.15);
+}
+.privacy-note,
+.next-steps {
+ max-width: 75ch;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.required-note {
+  font-size: 0.95rem;
+  color: #e3ebfa;
 }
 
-.apply-form textarea {
-  min-height: 7rem;
-  resize: vertical;
-}
-
-/* Fieldsets for radio buttons and checkboxes */
-.apply-form fieldset {
-  margin: 0;
-  padding: 0.9rem 1rem 1rem;
-  border: 2px solid #E8EEF4;
-  border-radius: 10px;
-}
-
-.apply-form legend {
-  padding: 0 0.4rem;
+.required {
+  color: #c9c4ff;
   font-weight: 700;
-  color: #0D1B2A;
 }
 
-/* Radio and Checkbox row layout */
+/* --- Text Alignment --- */
+.apply-intro,
+.privacy-note,
+.next-steps {
+  max-width: 75ch;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.required-note {
+  font-size: 0.95rem;
+  color: #606060;
+
+}
+
+.required {
+  color: #c9c4ff;
+  font-weight: 700;
+ 
+}
+
 .choice-group {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem 1.5rem;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
 }
 
 .choice-group label {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-weight: 400;
-}
-
-.choice-group input {
-  width: 1.15rem;
-  height: 1.15rem;
-  accent-color: #C2410C; /* Makes the checkbox/radio orange */
-}
-
-/* Submit Button Area */
-.form-actions {
-  grid-column: 1 / -1;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  padding-top: 0.5rem;
-}
-
-/* Submit Button Styling (Matches your header) */
-.btn {
-  display: inline-block;
-  padding: 0.75rem 1.6rem;
-  border: 2px solid transparent;
-  border-radius: 8px;
-  font-weight: 700;
-  text-decoration: none;
   cursor: pointer;
+  color:#3D343A;
+  font-weight: normal;
+
+}
+
+.form-actions {
+  text-align: center;
+  margin-top: 1rem;
 }
 
 .btn-primary {
-  background: #C2410C;
+  background: #4321FF; /* Navy blue background */
+
   color: #FFFFFF;
+  border: none;
+  padding: 1rem 3rem;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(66, 49, 255, 0.4);
 }
 
 .btn-primary:hover { 
-  background: #0D1B2A; /* Turns navy blue when hovered */
+  background: #3326be /* Turns navy blue when hovered */
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(66, 49, 255, 0.5);
+}
+
+.next-steps {
+  margin-top: 4rem;
+  text-align: center;
+  
+}
+
+.next-steps ol {
+ text-align: left;
+  display: inline-block;
 }
 
 /* Mobile Responsiveness (Stacks form into 1 column on small screens) */
@@ -262,4 +326,5 @@ border-radius: 2em;
 
 img {
   max-width: 100%;
+
 }
