@@ -1,64 +1,185 @@
-/*mayasa css */  /* --- Layout Container --- */
-.container {
-  max-width: 1100px; 
-  margin: 0 auto;
-  padding: 2rem 1.5rem; 
+/* Mayasa (author of apply page and layout) */
+
+:root {
+  --hover_color: #E3EBFA;
+  --logo_blue: #4231FF;
+  --background-color: #EEEEEE;
+  --dark_text: #3D343A;
 }
+
+* {
+  font-family: calibri, sans-serif; 
+  color: var(--dark_text);
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+}
+
+/* --- 2. The Perfect Navbar (Grey Pill) --- */
+.site-header {
+  display: flex;
+  justify-content: center; 
+  padding: 2rem 1rem;
+}
+
 .header-inner {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; 
   align-items: center;
-  padding: 1rem 2rem;
-  max-width: 1200px; 
-  margin: 0 auto;
+  background-color: #EBEBEB; 
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px; 
+  width: 100%;
+  max-width: 1300px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); 
 }
-.main-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem; 
-  padding: 0;
-  margin: 0;
-}
+
 .logo-img {
-  max-height: 50px; 
-  width: auto;
+  height: 55px; 
 }
+
+.main-nav {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: var(--logo_blue); 
+  background-color: transparent;
+  font-weight: 600;
+  padding: 0.6rem 1.8rem;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+/* Added hover for the plain "Home" link */
+.main-nav a:hover {
+  background-color: var(--hover_color);
+}
+
+.main-nav a.nav-btn {
+  background-color: var(--logo_blue);
+  color: white;
+}
+
+.main-nav a.nav-btn:hover {
+  background-color: var(--hover_color);
+  color: var(--logo_blue);
+}
+
+.main-nav a.nav-btn.active {
+  background-color: #3326BE; 
+  color: white;
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: white; 
+  border-radius: 30px;
+  padding: 0.3rem; 
+}
+
+.search-bar input {
+  border: none;
+  padding: 0.5rem 1rem;
+  padding-left: 2.5rem; /* ✅ CORRECTION: Stops text from overlapping the icon */
+  border-radius: 30px;
+  width: 220px;
+  outline: none; 
+  font-family: inherit;
+  background-image: url("img/search-icon.png");
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  background-size: 1em 1em;
+}
+
+.search-bar button {
+  background-color: var(--logo_blue);
+  color: white;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-bar button:hover {
+  background-color: #3326BE;
+}
+
+/* --- 3. Layout & Hero Box --- */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
 .apply-intro {
- background: linear-gradient(135deg, #7b6dff, #1a0f9e);
- color: #ffffff;
-  padding: 4rem 2rem; 
+  background: linear-gradient(135deg, #7B6DFF, #1A0F9E);
+  color: white;
+  padding: 4rem 2rem;
   border-radius: 24px;
   text-align: center;
   margin-bottom: 3rem;
   box-shadow: 0 10px 30px rgba(66, 49, 255, 0.3);
- 
 }
-.apply-intro h1 {
-  font-size: 2.5rem; 
-  margin-bottom: 1rem;
-  color: #ffffff;
-}
-.apply-intro a {
-  color: #c9c4ff;
-  text-decoration: underline;
 
+.apply-intro h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: white;
 }
-/* --- Form Layout --- */
+
+.apply-intro p {
+  color: var(--hover_color) !important; 
+}
+
+.apply-intro a {
+  color: white;
+  text-decoration: underline;
+}
+
+.required-note {
+  color: #FFFFFF !important;
+  font-size: 0.95rem;
+  margin-top: 1.5rem;
+}
+
+.required-note .required {
+  color: #C9C4FF; 
+}
+
+/* --- 4. The Form Section --- */
+#form-heading {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.privacy-note {
+  text-align: left;
+  max-width: 800px;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
 .apply-form {
   display: grid;
-  grid-template-columns: 1fr 1fr; 
-  gap: 1.5rem; 
-  margin-top: 2rem;
-  background: #ffffff; 
-  padding: 3rem;
-  border-radius: 20px;
-  border: 1px solid #e0e0e0;
-  box-shadow: 0 15px 35px rgba(66, 49, 255, 0.08);
-}
-
-.form-field--full,
-.form-actions {
-  grid-column: 1 / -1; 
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  background: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); 
+  border: 1px solid #E0E0E0;
 }
 
 .form-field {
@@ -66,134 +187,86 @@
   flex-direction: column;
   gap: 0.5rem;
 }
-.form-field label,
-.form-field legend {
-  font-weight: 600;
-  color: #4321ff;
-  font-size: o.95rem;
+
+.form-field--full,
+.form-actions {
+  grid-column: 1 / -1;
 }
 
-  
+.form-field label, 
+.form-field legend {
+  color: var(--logo_blue); 
+  font-weight: 600;
+  font-size: 0.95rem;
+}
 
 .form-field input,
 .form-field select,
 .form-field textarea {
-  padding: 0.85rem 1rem;
-  border: 1px solid #e0e0e0;
-  border-radius: 12px;
+  padding: 0.75rem;
+  border: 1px solid #E0E0E0;
+  border-radius: 8px;
   font-family: inherit;
   font-size: 1rem;
-  width: 100%; 
-  box-sizing: border-box;
-  background-color: #fcfcfc;
-  color: #3D343A;
-  transition: all 0.3s ease;
 }
+
 .form-field input:focus,
 .form-field select:focus,
 .form-field textarea:focus {
   outline: none;
-  border-color: #4321ff;
-  background-color: #ffffff;
-  box-shadow: 0 0 0 4px rgba(66, 49, 255, 0.15);
-}
-.privacy-note,
-.next-steps {
- max-width: 75ch;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-.required-note {
-  font-size: 0.95rem;
-  color: #e3ebfa;
-}
-
-.required {
-  color: #c9c4ff;
-  font-weight: 700;
-}
-
-/* --- Text Alignment --- */
-.apply-intro,
-.privacy-note,
-.next-steps {
-  max-width: 75ch;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-
-.required-note {
-  font-size: 0.95rem;
-  color: #606060;
-
-}
-
-.required {
-  color: #c9c4ff;
-  font-weight: 700;
- 
+  border-color: var(--logo_blue);
+  box-shadow: 0 0 0 3px rgba(66, 49, 255, 0.2);
 }
 
 .choice-group {
   display: flex;
-  flex-wrap: wrap;
   gap: 1.5rem;
-  margin-top: 0.5rem;
+  flex-wrap: wrap;
 }
 
 .choice-group label {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  cursor: pointer;
-  color:#3D343A;
   font-weight: normal;
-
 }
 
+/* --- 5. The Button --- */
 .form-actions {
   text-align: center;
   margin-top: 1rem;
 }
 
 .btn-primary {
-  background: #4321FF; /* Navy blue background */
-
-  color: #FFFFFF;
+  background-color: var(--logo_blue);
+  color: white;
   border: none;
-  padding: 1rem 3rem;
+  padding: 0.8rem 2.5rem;
   border-radius: 30px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 5px 15px rgba(66, 49, 255, 0.4);
+  transition: 0.3s;
 }
-.btn-primary:hover { 
-  background: #3326be; /* Turns navy blue when hovered */
+
+.btn-primary:hover {
+  background-color: #3326BE;
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(66, 49, 255, 0.5);
-}
-.next-steps {
-  margin-top: 4rem;
-  text-align: center;
-  
 }
 
-.next-steps ol {
- text-align: left;
-  display: inline-block;
-}
-
-/* Mobile Responsiveness (Stacks form into 1 column on small screens) */
-@media (max-width: 760px) {
-  .apply-form {
-    grid-template-columns: 1fr;
+/* --- 6. Mobile View (Responsive) --- */
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    border-radius: 20px;
+    gap: 1rem;
     padding: 1rem;
   }
-} 
+  .main-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .apply-form {
+    grid-template-columns: 1fr;
+  }
+}
 
 
 /*Sammy (author of index page)*/
