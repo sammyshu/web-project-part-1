@@ -280,10 +280,13 @@ body {
 * {
     font-family: calibri, sans-serif;
     color: #3D343A; /*same as logo*/
+
 }
 body {
     background-color: var(--background-color);
 }
+
+
 nav a {
 display:inline-flex;
     text-decoration: none;
@@ -398,4 +401,9 @@ border-radius: 2em;
 img {
   max-width: 100%;
 
+}
+
+/*More universal settings: Not specific to navbar*/
+main{
+  padding: 2rem;
 }

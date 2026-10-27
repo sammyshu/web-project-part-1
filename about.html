@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!--
+    about.html 
+
+    requirements:
+    [ ] Navigation menu
+    [ ] Group name and class day/time in a nested list
+    [ ] Group photo in <figure> , with caption
+    [ ] Member contributions and quotes using a <dl> 
+    [ ] A quote from each member in their FIRST LANGUAGE + English translation
+    [ ] Fun-facts table with <caption>
+    [ ] Styled student IDs, bordered figure, table with hex colours + hover effects
+    [ ]  embedded CSS and inline
+    [ ] Accesbility
+-->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Meet the team behind the MatchFit website"/>
+        <meta name="author" content="Group 7"/>
+        <link rel="stylesheet" href="styles.css">
+        <title>About the MatchFit Sports Team</title>
+
+        <style>
+            /* TODO:  .student-id {}
+            /* TODO: .group-photo img {}
+            /* TODO: .fun-facts {} etc etc etc */
+        </style>
+    </head>
+    <body>
+        <!--
+        identical navbar
+        -->
+        <header>
+           <nav class="navbar">
+                    <img src="img/logo.png" alt="logo" width="100">
+
+                    <a href="index.html" >Home</a>
+                    <a href="jobs.html">Jobs</a>
+                    <a href="apply.html">Apply</a>
+                    <a href="about.html" aria-current="page">About</a>
+                    <form class = "searchbar">
+                        
+                        <!-- <label for="search"><img src="img/search-icon.png" alt="logo" width="50"/></label>> -->
+                        <input type="text" id="search" name="search" placeholder="Search for something..." />
+                        <input type="submit" id ="go" value="Go"/>
+                    </form>
+            </nav>
+        </header>
+
+        <main id="main-content">
+            <h1>TODO: page heading, e.g. "About our team"</h1>
+            <!-- TODO: one short paragraph introducing the group and the project,
+                 written by the group =(not sourced from anywhere) -->
+
+            <!--
+                below must be nested list
+            -->
+            <section aria-labelledby="group-heading"> <!--We need a label-->
+                <h2 id="group-heading">Group details</h2>
+                <ul>
+                    <li><strong>Group:</strong> TODO: group name
+                        <ul>
+                            <li><strong>Class day/time:</strong> Sundays and Tuesdays at 9:00 AM</li>
+                            <li><strong>Unit:</strong> COS10026 Web Technology Project, Study Period 3 2026</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+            <!--
+            Group photo: all groupmembers
+            -->
+            <figure class="group-photo">
+                <img src="img/TODO-group-photo.jpg" alt="A photo of Group 7 all together">
+                     width="640" height="360"/>
+            </figure>
+
+            <!--
+            3. Member contributions and quotes definition list (<dl>).
+            Must write their contribution, then quote in their first
+            language with an English translation beside it. Native English
+            speakers have to put a quote in another language they like.
+                    Lang attribute is for accesibility
+            -->
+                    <!--aria-labelledby is for accessibility. We should put it in all the sections—  take note.... -->
+            <section aria-labelledby="members-heading">
+                <h2 id="members-heading">Contributions</h2>
+                <dl>
+                    <dt>Member name:<span class="student-id">ID:</span></dt>
+                    <dd>What did the member do</dd>
+                    <dd>
+                        <blockquote>
+                            <p lang="your native language code">quote in the member's first language</p>
+                            <p>English translation</p>
+                        </blockquote>
+                    </dd>
+
+                    <!-- copy paste for each member -->
+                </dl>
+            </section>
+
+            <!--
+            Table, has to be about fun facts
+            -->
+
+            <section aria-labelledby="table-heading"> 
+                <h2 id == "table-heading">table heading</h2>
+                <table class="fun-facts">
+                    <caption>Getting to know Group 7 (or some other caption)</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Member</th>
+                            <th scope="col">TODO: type offact</th>
+                            <th scope="col">TODO: type of factfact</th>
+                            <th scope="col">TODO: type of fact</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">TODO: member </th>
+                            <td>TODO: specific fact to that member</td>
+                            <td>TODO</td>
+                            <td>TODO</td>
+                        </tr>
+                        <!-- TODO: one row per member -->
+                    </tbody>
+                </table>
+            </section>
+
+            <p style="some inline css">closing</p>
+        </main>
+
+        <!--
+sammy jobsame footer
+        -->
+        <footer>
+            <p>Copy the footer from index.html once fully complete</p>
+            <p>&copy; copyright</p>
+        </footer>
+    </body>
+</html>
