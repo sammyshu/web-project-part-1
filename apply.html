@@ -7,7 +7,7 @@
   <meta name="author" content="Group 7 - COS10026">
   <title>MatchFit Sports &amp; Fitness Network | Apply</title>
   
-  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <!-- Removed the missing favicon link to prevent 404 error -->
   <link rel="stylesheet" href="styles.css">
 
   <!-- Embedded CSS -->
@@ -113,12 +113,14 @@
 
           <div class="form-field form-field--full">
             <label for="street">Street address <span class="required">*</span></label>
-            <input type="text" id="street" name="street" required autocomplete="address-line1">
+            <!-- Added maxlength="40" here -->
+            <input type="text" id="street" name="street" required maxlength="40" autocomplete="address-line1">
           </div>
 
           <div class="form-field">
             <label for="suburb">Suburb or town <span class="required">*</span></label>
-            <input type="text" id="suburb" name="suburb" required autocomplete="address-level2">
+            <!-- Added maxlength="40" here -->
+            <input type="text" id="suburb" name="suburb" required maxlength="40" autocomplete="address-level2">
           </div>
 
           <div class="form-field">
@@ -154,7 +156,8 @@
           <fieldset class="form-field form-field--full">
             <legend>Skills <span class="required">*</span></legend>
             <div class="choice-group">
-              <label><input type="checkbox" name="skills" value="html-css"> HTML and CSS</label>
+              <!-- Added required to the first checkbox so the user must pick at least one -->
+              <label><input type="checkbox" name="skills" value="html-css" required> HTML and CSS</label>
               <label><input type="checkbox" name="skills" value="javascript"> JavaScript</label>
               <label><input type="checkbox" name="skills" value="ui-design"> UI and UX Design</label>
               <label><input type="checkbox" name="skills" value="database"> Database and SQL</label>
@@ -164,6 +167,7 @@
           </fieldset>
 
           <div class="form-field form-field--full">
+            <!-- No required attribute here, so this stays optional -->
             <label for="other-skills">Other skills or experience (optional)</label>
             <textarea id="other-skills" name="other_skills" rows="4"></textarea>
           </div>
