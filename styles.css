@@ -407,3 +407,30 @@ img {
 main{
   padding: 2rem;
 }
+/* --- About Page Specifics (Ziad) --- */
+section h2 {
+  color: var(--logo_blue);
+  border-bottom: 2px solid var(--hover_color);
+  padding-bottom: 0.5rem;
+  margin-top: 2rem;
+}
+
+dl dt {
+  font-size: 1.2rem;
+  color: var(--logo_blue);
+  margin-top: 1.5rem;
+}
+
+dl dd {
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+blockquote {
+  background-color: white;
+  border-left: 4px solid var(--logo_blue);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0 8px 8px 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}

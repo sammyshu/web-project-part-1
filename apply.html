@@ -36,34 +36,22 @@
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <!-- CLEANED HEADER -->
-  <header class="site-header">
-    <div class="header-inner">
+  <!-- Your Requested Navbar -->
+  <header>
+    <nav class="navbar">
+        <img src="img/logo.png" alt="logo" width="100">
 
-      
-      <!-- Logo -->
-      <a href="index.html" class="logo-link">
-        <img src="img/logo.png" alt="MatchFit Logo" class="logo-img">
-      </a>
-
-           
-
-      <!-- Navigation Links -->
-      <nav class="main-nav">
         <a href="index.html">Home</a>
-        <a href="jobs.html" class="nav-btn">Jobs</a>
-        <a href="apply.html" class="nav-btn active">Apply</a>
-        <a href="about.html" class="nav-btn">About</a>
-      </nav>
-
-      <!-- Search Bar -->
-      <form class="search-bar">
-        <input type="text" placeholder="Search for something...">
-        <button type="submit">Go</button>
-      </form>
-
-    </div>
+        <a href="jobs.html">Jobs</a>
+        <a href="apply.html" aria-current="page">Apply</a>
+        <a href="about.html">About</a>
+        <form class="searchbar">
+            <input type="text" id="search" name="search" placeholder="Search for something..." />
+            <input type="submit" id="go" value="Go"/>
+        </form>
+    </nav>
   </header>
 
   <main id="main-content">
@@ -112,7 +100,6 @@
 
           <div class="form-field">
             <label for="dob">Date of birth (dd/mm/yyyy) <span class="required">*</span></label>
-            <!-- Added pattern attribute back -->
             <input type="text" id="dob" name="dob" required placeholder="dd/mm/yyyy" pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/[0-9]{4}">
           </div>
 
@@ -141,7 +128,6 @@
               <option value="VIC">VIC</option>
               <option value="NSW">NSW</option>
               <option value="QLD">QLD</option>
-              <!-- Added missing states -->
               <option value="NT">NT</option>
               <option value="WA">WA</option>
               <option value="SA">SA</option>
@@ -170,7 +156,7 @@
             <div class="choice-group">
               <label><input type="checkbox" name="skills" value="html-css"> HTML and CSS</label>
               <label><input type="checkbox" name="skills" value="javascript"> JavaScript</label>
-              <label><input type="checkbox" name="skills" value="ui-design"> UI and UX design</label>
+              <label><input type="checkbox" name="skills" value="ui-design"> UI and UX Design</label>
               <label><input type="checkbox" name="skills" value="database"> Database and SQL</label>
               <label><input type="checkbox" name="skills" value="content"> Content writing</label>
               <label><input type="checkbox" name="skills" value="project-management"> Project management</label>
