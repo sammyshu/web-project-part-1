@@ -7,7 +7,6 @@
   <meta name="author" content="Group 7 - COS10026">
   <title>MatchFit Sports &amp; Fitness Network | Apply</title>
   
-  <!-- Removed the missing favicon link to prevent 404 error -->
   <link rel="stylesheet" href="styles.css">
 
   <!-- Embedded CSS -->
@@ -38,18 +37,16 @@
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <!-- Your Requested Navbar -->
   <header>
     <nav class="navbar">
         <img src="img/logo.png" alt="logo" width="100">
-
         <a href="index.html">Home</a>
         <a href="jobs.html">Jobs</a>
         <a href="apply.html" aria-current="page">Apply</a>
         <a href="about.html">About</a>
         <form class="searchbar">
-            <input type="text" id="search" name="search" placeholder="Search for something..." />
-            <input type="submit" id="go" value="Go"/>
+            <input type="text" id="search" name="search" placeholder="Search for something...">
+            <input type="submit" id="go" value="Go">
         </form>
     </nav>
   </header>
@@ -57,19 +54,16 @@
   <main id="main-content">
     <div class="container">
 
-      <!-- Purple Hero Box -->
       <section class="apply-intro" aria-labelledby="apply-heading">
         <h1 id="apply-heading">Apply to join MatchFit</h1>
         <p>Use this form to apply for any current vacancy. Your reference number is
            shown on each job advertisement &mdash; you can find it on our
            <a href="jobs.html">Jobs page</a>.</p>
-
         <p class="required-note">
           Fields marked <span class="required" aria-hidden="true">*</span> are required.
         </p>
       </section>
 
-      <!-- Application Form Section -->
       <section aria-labelledby="form-heading">
         <h2 id="form-heading">Application form</h2>
 
@@ -113,13 +107,11 @@
 
           <div class="form-field form-field--full">
             <label for="street">Street address <span class="required">*</span></label>
-            <!-- Added maxlength="40" here -->
             <input type="text" id="street" name="street" required maxlength="40" autocomplete="address-line1">
           </div>
 
           <div class="form-field">
             <label for="suburb">Suburb or town <span class="required">*</span></label>
-            <!-- Added maxlength="40" here -->
             <input type="text" id="suburb" name="suburb" required maxlength="40" autocomplete="address-level2">
           </div>
 
@@ -156,7 +148,6 @@
           <fieldset class="form-field form-field--full">
             <legend>Skills <span class="required">*</span></legend>
             <div class="choice-group">
-              <!-- Added required to the first checkbox so the user must pick at least one -->
               <label><input type="checkbox" name="skills" value="html-css" required> HTML and CSS</label>
               <label><input type="checkbox" name="skills" value="javascript"> JavaScript</label>
               <label><input type="checkbox" name="skills" value="ui-design"> UI and UX Design</label>
@@ -167,7 +158,6 @@
           </fieldset>
 
           <div class="form-field form-field--full">
-            <!-- No required attribute here, so this stays optional -->
             <label for="other-skills">Other skills or experience (optional)</label>
             <textarea id="other-skills" name="other_skills" rows="4"></textarea>
           </div>
