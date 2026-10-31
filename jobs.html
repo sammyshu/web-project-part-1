@@ -230,15 +230,16 @@ article p a[href*="apply"] {
 <nav class="navbar">
                     <img src="img/logo.png" alt="logo" width="100">
 
-                    <a href="index.html" aria-current="page">Home</a>
-                    <a href="jobs.html">Jobs</a>
+                    <a href="index.html">Home</a>
+                    <a href="jobs.html" aria-current="page">Jobs</a>
                     <a href="apply.html">Apply</a>
                     <a href="about.html">About</a>
                     <form class = "searchbar">
-                        
-                        <!-- <label for="search"><img src="img/search-icon.png" alt="logo" width="50"/></label>> -->
-                        <input type="text" id="search" name="search" placeholder="Search for something..." />
-                        <input type="submit" id ="go" value="Go"/>
+                      <!--The label is for screenreaders only because the background image (a search icon) and placeholder text already indicate the purpose of the field.-->
+                      <label for="search" class="for-screenreader">Search bar</label>
+                      <input type="text" id="search" name="search" placeholder="Search for something..." />
+                      <label for="go" class="for-screenreader">Submit Search</label>
+                      <input type="submit" id ="go" value="Go"/>
                     </form>
             </nav>
   </header>
@@ -247,15 +248,15 @@ article p a[href*="apply"] {
 
 
   <main id="main">
-  <section class="banner">
-    <h1>Careers at MatchFit</h1>
+  <section class="banner" aria-labelledby="careers">
+    <h2 id="careers">Careers at MatchFit</h1>
     <p>Help us build the websites and apps that keep community sport moving.</p>
   </section>
     <!-- Main content on the left -->
     <div class="content">
 
-      <section id="intro">
-        <h2>Join our digital team</h2>
+      <section id="intro" aria-labelledby="intro-header">
+        <h2 id="intro-header">Join our digital team</h2>
         <p>
           MatchFit runs club memberships, event registration and fitness
           tracking for community sports clubs, coaches and their members.
@@ -266,8 +267,8 @@ article p a[href*="apply"] {
         <p style="font-weight: bold;">Applications for both roles close on 30 November 2026.</p>
       </section>
 
-      <section id="vacancies">
-        <h2>Current vacancies</h2>
+      <section id="vacancies" aria-labelledby="vacancies-header">
+        <h2 id="vacancies-header">Current vacancies</h2>
 
         <!-- Job 1 -->
         <article class="job">
@@ -357,8 +358,8 @@ article p a[href*="apply"] {
         </article>
       </section>
 
-      <section id="culture">
-        <h2>Working at MatchFit</h2>
+      <section id="culture" aria-labelledby="company-culture-header">
+        <h2 id = "company-culture-header">Working at MatchFit</h2>
         <p>
           Our team works a hybrid week, finishes early on club game days and
           gets a free gym membership. Both roles are based in Melbourne.

@@ -388,6 +388,9 @@ border-radius: 2em;
   background-color:#4231FF;
 }
 
+.for-screenreader{
+opacity:0;
+}
 
 .navbar .searchbar input#go:hover{
   background-color:#3326be;

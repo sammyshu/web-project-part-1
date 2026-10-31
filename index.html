@@ -2,8 +2,10 @@
 <!DOCTYPE html>
 <!-- 
      index.html (home page)
+     Written by Sammy Alabsi
      COS10026 Web Technology Project, Group 7
-     Website design inspired by airbnb and stripe
+     Website design inspired by AirBNB and Stripe. The Hero section was inspired by Stripe,
+     while AirBNB inspired the rounded card-centric design
 -->
 <html lang="en">
     <head>
@@ -11,7 +13,6 @@
         <meta name = "description" content="Sports & Fitness Main Page">
         <meta name="author" content="Group 7"/>
         <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="styles/index.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <style>
 :root{
@@ -96,9 +97,10 @@
                     <a href="apply.html">Apply</a>
                     <a href="about.html">About</a>
                     <form class = "searchbar">
-                        
-                        <!-- <label for="search"><img src="img/search-icon.png" alt="logo" width="50"/></label>> -->
+                        <!--The label is for screenreaders only because the background image (a search icon) and placeholder text already indicate the purpose of the field.-->
+                        <label for="search" class="for-screenreader">Search bar</label>
                         <input type="text" id="search" name="search" placeholder="Search for something..." />
+                        <label for="go" class="for-screenreader">Submit Search</label>
                         <input type="submit" id ="go" value="Go"/>
                     </form>
             </nav>

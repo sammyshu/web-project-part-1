@@ -48,8 +48,11 @@
         <a href="apply.html" aria-current="page">Apply</a>
         <a href="about.html">About</a>
         <form class="searchbar">
-            <input type="text" id="search" name="search" placeholder="Search for something..." />
-            <input type="submit" id="go" value="Go"/>
+              <!--The label is for screenreaders only because the background image (a search icon) and placeholder text already indicate the purpose of the field.-->
+              <label for="search" class="for-screenreader">Search bar</label>
+              <input type="text" id="search" name="search" placeholder="Search for something..." />
+              <label for="go" class="for-screenreader">Submit Search</label>
+              <input type="submit" id ="go" value="Go"/>
         </form>
     </nav>
   </header>
