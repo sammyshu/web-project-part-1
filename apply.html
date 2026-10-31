@@ -45,8 +45,16 @@
         <a href="apply.html" aria-current="page">Apply</a>
         <a href="about.html">About</a>
         <form class="searchbar">
+<<<<<<< HEAD
             <input type="text" id="search" name="search" placeholder="Search for something...">
             <input type="submit" id="go" value="Go">
+=======
+              <!--The label is for screenreaders only because the background image (a search icon) and placeholder text already indicate the purpose of the field.-->
+              <label for="search" class="for-screenreader">Search bar</label>
+              <input type="text" id="search" name="search" placeholder="Search for something..." />
+              <label for="go" class="for-screenreader">Submit Search</label>
+              <input type="submit" id ="go" value="Go"/>
+>>>>>>> cf13466375aa41422bd7e17b6ee80c0874d52e80
         </form>
     </nav>
   </header>
@@ -181,26 +189,23 @@
     </div>
   </main>
 
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div>
-        <h2 class="footer-heading">Project links</h2>
-        <ul class="footer-links">
-          <li><a href="#">Jira project board</a></li>
-          <li><a href="https://github.com/sammyshu/web-project-part-1">GitHub repository</a></li>
-          <li><a href="#">Live site</a></li>
-        </ul>
-      </div>
-      <div>
-        <h2 class="footer-heading">Contact us</h2>
-        <address>
-          MatchFit Sports &amp; Fitness Network<br>
-          12 Stadium Way<br>
-          Doha, Qatar<br>
-          <a href="mailto:careers@matchfit.com.qa">careers@matchfit.com.qa</a>
-        </address>
-      </div>
-    </div>
-  </footer>
+        <footer>
+            <nav class = "footer">
+                <h3 class = "contact-us">Contact us:</h3>
+                <ul class = "contact">
+                    <a class = "footer-link" href="https://somting.atlassian.net/jira/software/projects/WP/boards/2?filter=&groupBy=none&atlOrigin=eyJpIjoiOWVjMmMxOWJhMjJiNGZmOWJiOGNjNmIxYzUzZmUzZWIiLCJwIjoiaiJ9">Jira</a>
+                    <a class = "footer-link" href="https://github.com/sammyshu/web-project-part-1">Github</a>
+                    <a class = "footer-link" href="mailto:info@matchfit.com">Email</a>
+                </ul>
+            <p class="footer-acknowledgement">
+                <strong>Acknowledgement of Country:</strong> MatchFit Sports acknowledges the
+                Traditional Custodians of the lands on which we work and train.
+                We are committed to making sport welcoming for Aboriginal and Torres Strait
+                Islander peoples, and we encourage applications from First Nations candidates
+                for every role we advertise.
+            </p>
+            <p>&copy; 2026 MatchFit Sports. All rights reserved. Group7's project for COS10026.</p>
+            </nav>
+        </footer>
 </body>
 </html>
