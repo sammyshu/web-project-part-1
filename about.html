@@ -39,43 +39,6 @@
             color: #606060;
         }
 
-        /* Styling the Fun Facts Table */
-        .fun-facts {
-            width: 100%;
-            border-collapse: collapse;
-            background: white;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            border: 1px solid #E0E0E0;
-            margin-bottom: 2rem;
-        }
-        .fun-facts caption {
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-            color: var(--logo_blue);
-        }
-        .fun-facts th, .fun-facts td {
-            padding: 1rem;
-            border-bottom: 1px solid #E0E0E0;
-            text-align: left;
-        }
-        .fun-facts thead {
-            background-color: var(--logo_blue);
-        }
-        /* Fixes the header text to be white */
-        .fun-facts thead th {
-            color: white;
-            font-weight: bold;
-        }
-        /* Hover effect for table rows */
-        .fun-facts tbody tr {
-            transition: background-color 0.2s ease;
-        }
-        .fun-facts tbody tr:hover {
-            background-color: var(--hover_color);
-        }
     </style>
 </head>
 <body>
@@ -174,7 +137,7 @@
             <!-- Fun Facts Table -->
             <section aria-labelledby="table-heading"> 
                 <h2 id="table-heading">Fun Facts</h2>
-                <table class="fun-facts">
+                <table class="data-table">
                     <caption>Getting to know Group 7</caption>
                     <thead>
                         <tr>
@@ -194,7 +157,7 @@
                         <tr>
                             <th scope="row">Sammy</th>
                             <td>Basketball</td>
-                            <td>UI/UX Designer</td>
+                            <td>Systems Infrastructure Engineer</td>
                             <td>Iced Coffee</td>
                         </tr>
                         <tr>
