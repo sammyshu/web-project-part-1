@@ -97,7 +97,7 @@ body {
 .search-bar input {
   border: none;
   padding: 0.5rem 1rem;
-  padding-left: 2.5rem; /* ✅ CORRECTION: Stops text from overlapping the icon */
+  padding-left: 2.5rem; /* Keep the label text clear of the search icon */
   border-radius: 30px;
   width: 220px;
   outline: none; 
@@ -531,4 +531,22 @@ main{
 }
 .data-table tbody th:hover {
   background-color: var(--hover-color);
+}
+
+/* mobile compatibility for tables and footer */
+@media (max-width: 768px) {
+  /* Wide tables scroll on small screens */
+  .table-scroll {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  
+  nav a {
+    font-size: clamp(0.7rem, 4vw, 2rem);
+  }
+  .contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }

@@ -7,7 +7,7 @@
   <meta name="keywords" content="MatchFit, jobs, careers, web developer, UX designer, sports, fitness">
   <meta name="author" content="YOUR NAME, Group G07">
   <link rel="stylesheet" href="styles.css">
-  <title>Jobs | MatchFit</title>
+  <title>Jobs | MatchFit Sports</title>
   <style>
 
 /* ===== MATCHFIT JOBS PAGE ===== */
@@ -223,6 +223,27 @@ aside li {
     margin-bottom: 10px;
 }
 
+/* This is a last minute change by Sammy so that the aside fits properly in the 
+left margin on a normal 1080p laptop screen. It says 1470px instead of 1920px because 
+windows scales things so you have to take that into account
+*/
+@media (min-width: 1470px) {
+  aside {
+    width: 25%;
+    max-width: 200px;
+    margin-right: -216px;
+  }
+}
+
+/* Any screen than less 1470px (after scaling shenanigans) has the aside at the bottom*/
+@media (max-width: 1469px) {
+  aside {
+    float: none;
+    width: 100%;
+    margin: 2rem 0 0;
+  }
+}
+
   </style>
 
 </head>
@@ -394,8 +415,9 @@ aside li {
             <nav class = "footer">
                 <h2 class = "contact-us">Contact us:</h2>
                 <ul class = "contact">
-                    <li><a class = "footer-link" href="https://somting.atlassian.net/jira/software/projects/WP/boards/2?filter=&groupBy=none&atlOrigin=eyJpIjoiOWVjMmMxOWJhMjJiNGZmOWJiOGNjNmIxYzUzZmUzZWIiLCJwIjoiaiJ9">Jira</a></li>
+                    <li><a class = "footer-link" href="https://somting.atlassian.net/jira/software/projects/WP/boards/2">Jira</a></li>
                     <li><a class = "footer-link" href="https://github.com/sammyshu/web-project-part-1">Github</a></li>
+                    <li><a class = "footer-link" href="https://sammyshu.github.io/web-project-part-1/">Live site</a></li>
                     <li><a class = "footer-link" href="mailto:info@matchfit.com">Email</a></li>
                 </ul>
             <p class="footer-acknowledgement">

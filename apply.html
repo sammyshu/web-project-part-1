@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Apply online for a role at MatchFit Sports &amp; Fitness Network.">
   <meta name="author" content="Group 7 - COS10026">
-  <title>MatchFit Sports &amp; Fitness Network | Apply</title>
+  <title>Apply | MatchFit Sports</title>
   
   <link rel="stylesheet" href="styles.css">
 
@@ -87,12 +87,12 @@
 
           <div class="form-field">
             <label for="first-name">First name <span class="required">*</span></label>
-            <input type="text" id="first-name" name="first_name" required maxlength="20" autocomplete="given-name">
+            <input type="text" id="first-name" name="first_name" required maxlength="20" autocomplete="given-name" pattern="[A-Za-z][A-Za-z' -]{0,19}">
           </div>
 
           <div class="form-field">
             <label for="last-name">Last name <span class="required">*</span></label>
-            <input type="text" id="last-name" name="last_name" required maxlength="20" autocomplete="family-name">
+            <input type="text" id="last-name" name="last_name" required maxlength="20" autocomplete="family-name" pattern="[A-Za-z][A-Za-z' -]{0,19}">
           </div>
 
           <div class="form-field">
@@ -152,11 +152,11 @@
             <legend>Skills <span class="required">*</span></legend>
             <div class="choice-group">
               <label><input type="checkbox" name="skills" value="html-css" required> HTML and CSS</label>
-              <label><input type="checkbox" name="skills" value="javascript"> JavaScript</label>
-              <label><input type="checkbox" name="skills" value="ui-design"> UI and UX Design</label>
-              <label><input type="checkbox" name="skills" value="database"> Database and SQL</label>
-              <label><input type="checkbox" name="skills" value="content"> Content writing</label>
-              <label><input type="checkbox" name="skills" value="project-management"> Project management</label>
+              <label><input type="checkbox" name="skills" value="javascript" required> JavaScript</label>
+              <label><input type="checkbox" name="skills" value="ui-design" required> UI and UX Design</label>
+              <label><input type="checkbox" name="skills" value="database" required> Database and SQL</label>
+              <label><input type="checkbox" name="skills" value="content" required> Content writing</label>
+              <label><input type="checkbox" name="skills" value="project-management" required> Project management</label>
             </div>
           </fieldset>
 
@@ -187,8 +187,9 @@
             <nav class = "footer">
                 <h2 class = "contact-us">Contact us:</h2>
                 <ul class = "contact">
-                    <li><a class = "footer-link" href="https://somting.atlassian.net/jira/software/projects/WP/boards/2?filter=&groupBy=none&atlOrigin=eyJpIjoiOWVjMmMxOWJhMjJiNGZmOWJiOGNjNmIxYzUzZmUzZWIiLCJwIjoiaiJ9">Jira</a></li>
+                    <li><a class = "footer-link" href="https://somting.atlassian.net/jira/software/projects/WP/boards/2">Jira</a></li>
                     <li><a class = "footer-link" href="https://github.com/sammyshu/web-project-part-1">Github</a></li>
+                    <li><a class = "footer-link" href="https://sammyshu.github.io/web-project-part-1/">Live site</a></li>
                     <li><a class = "footer-link" href="mailto:info@matchfit.com">Email</a></li>
                 </ul>
             <p class="footer-acknowledgement">
