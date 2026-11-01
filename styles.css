@@ -401,6 +401,7 @@ opacity:0;
 .contact{
   display:flex;
   justify-content: center;
+  list-style: none;
 }
 
 img {
