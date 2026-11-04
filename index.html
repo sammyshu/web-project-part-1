@@ -69,7 +69,7 @@
                 transform: translateY(.3em);
                 box-shadow: 0 1vw 2vw #4231ff66;
             }
-            .products_list{
+            .products-list{
                 box-sizing: border-box;      
                 display:flex;
                 max-width: 1100px;
@@ -84,6 +84,8 @@
                 -webkit-text-fill-color: transparent;
                text-align: center;
             }
+
+
         </style>
         <title>MatchFit Sports</title>
     </head>
@@ -106,20 +108,21 @@
             </nav>
         </header>
         <main>
+        <div class = "container">
         <div class="hero-section">
             <h1 class = "hero-title" >MatchFit Sports</h1>
             <h2 style="font-size: 2em; color:blue; font-style:italic">Gear Up. Go Beyond.</h2>
-            <p id="description_paragraph" style="color:white;">MatchFit Sports is Qatar's premier community sports organization, 
+            <p id="description-paragraph" style="color:white;">MatchFit Sports is Australia's premier community sports organization, 
                 developing club membership systems, event registration platforms,
                 and fitness tracking apps, for members, coaches, and clubs to stay 
                 integrated with the technological world.</p>
                 
-                <a href="about.html">Apply for a job</a>
+                <a href="apply.html">Apply for a job</a>
 
         </div>
         
-        <h1 class = "subtitle">Our Products:</h1>
-        <div class = "products_list">
+        <h2 class = "subtitle">Our Products:</h2>
+        <div class = "products-list">
             <div class = "product">
                 <h2 class = "subtitle">ClubHub</h2>
                 <p>ClubHub is an all-in-one club management system that lets organizations handle memberships, schedules, and communication in one place.</p>
@@ -133,15 +136,48 @@
                 <p>FiTrack helps members and coaches monitor workouts, track fitness goals, and view progress through easy-to-read dashboards.</p>
             </div>
         </div>
+
+        <h2 class = "subtitle">Open Roles:</h2>
+        <div class="table-scroll"> <!-- for small screens/mobile compatibility -->
+        <table class = "data-table">
+            <caption>Applications close on 30 November 2026. Apply with the reference number via the Apply page.</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Role</th>
+                    <th scope="col">Reference</th>
+                    <th scope="col">Salary</th>
+                    <th scope="col">Reports to</th>
+                    <th scope="col">Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Front-End Developer, Member Portal</th>
+                    <td>FE204</td>
+                    <td>$78,000 to $90,000 a year plus super</td>
+                    <td>Digital Product Manager</td>
+                    <td rowspan="2">Melbourne</td>
+                </tr>
+                <tr>
+                    <th scope="row">UX/UI Designer, Event Registration</th>
+                    <td>UX318</td>
+                    <td>$72,000 to $85,000 a year plus super</td>
+                    <td>Head of Design</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        </div>
         </main>
         
         <footer>
             <nav class = "footer">
-                <h3 class = "contact-us">Contact us:</h3>
+                <h2 class = "contact-us">Contact us:</h2>
                 <ul class = "contact">
-                    <a class = "footer-link" href="https://somting.atlassian.net/jira/software/projects/WP/boards/2?filter=&groupBy=none&atlOrigin=eyJpIjoiOWVjMmMxOWJhMjJiNGZmOWJiOGNjNmIxYzUzZmUzZWIiLCJwIjoiaiJ9">Jira</a>
-                    <a class = "footer-link" href="https://github.com/sammyshu/web-project-part-1">Github</a>
-                    <a class = "footer-link" href="mailto:info@matchfit.com">Email</a>
+                    <li><a class = "footer-link" href="https://somting.atlassian.net/jira/software/projects/WP/boards/2">Jira</a></li>
+                    <li><a class = "footer-link" href="https://github.com/sammyshu/web-project-part-1">Github</a></li>
+                    <li><a class = "footer-link" href="https://sammyshu.github.io/web-project-part-1/">Live site</a></li>
+                    <li><a class = "footer-link" href="mailto:info@matchfit.com">Email</a></li>
                 </ul>
             <p class="footer-acknowledgement">
                 <strong>Acknowledgement of Country:</strong> MatchFit Sports acknowledges the
@@ -153,5 +189,6 @@
             <p>&copy; 2026 MatchFit Sports. All rights reserved. Group7's project for COS10026.</p>
             </nav>
         </footer>
+        
     </body>
 </html>

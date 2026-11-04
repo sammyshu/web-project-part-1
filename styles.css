@@ -1,15 +1,22 @@
+/*Global variables*/
+:root{
+  --hover-color: #E3EBFA;
+  --logo-blue: #4231FF;
+  --background-color: #EEEEEE;
+  --dark-text: #3D343A;
+  --hover-color: #E3EBFA;
+  --logo-blue: #4231FF;
+  --background-color: #EEEEEE;
+  --logo-gray: var(--dark-text); 
+}
+
 /* Mayasa (author of apply page and layout) */
 
-:root {
-  --hover_color: #E3EBFA;
-  --logo_blue: #4231FF;
-  --background-color: #EEEEEE;
-  --dark_text: #3D343A;
-}
+
 
 * {
   font-family: calibri, sans-serif; 
-  color: var(--dark_text);
+  color: var(--dark-text);
   box-sizing: border-box;
 }
 
@@ -50,7 +57,7 @@ body {
 
 .main-nav a {
   text-decoration: none;
-  color: var(--logo_blue); 
+  color: var(--logo-blue); 
   background-color: transparent;
   font-weight: 600;
   padding: 0.6rem 1.8rem;
@@ -60,17 +67,17 @@ body {
 
 /* Added hover for the plain "Home" link */
 .main-nav a:hover {
-  background-color: var(--hover_color);
+  background-color: var(--hover-color);
 }
 
 .main-nav a.nav-btn {
-  background-color: var(--logo_blue);
+  background-color: var(--logo-blue);
   color: white;
 }
 
 .main-nav a.nav-btn:hover {
-  background-color: var(--hover_color);
-  color: var(--logo_blue);
+  background-color: var(--hover-color);
+  color: var(--logo-blue);
 }
 
 .main-nav a.nav-btn.active {
@@ -90,7 +97,11 @@ body {
 .search-bar input {
   border: none;
   padding: 0.5rem 1rem;
+<<<<<<< HEAD
   padding-left: 2.5rem; 
+=======
+  padding-left: 2.5rem; /* Keep the label text clear of the search icon */
+>>>>>>> 2eed8ea53200d9dbbb32821a52110dea849f4718
   border-radius: 30px;
   width: 220px;
   outline: none; 
@@ -102,7 +113,7 @@ body {
 }
 
 .search-bar button {
-  background-color: var(--logo_blue);
+  background-color: var(--logo-blue);
   color: white;
   border: none;
   padding: 0.5rem 1.5rem;
@@ -140,7 +151,7 @@ body {
 }
 
 .apply-intro p {
-  color: var(--hover_color) !important; 
+  color: var(--hover-color) !important; 
 }
 
 .apply-intro a {
@@ -195,7 +206,7 @@ body {
 
 .form-field label, 
 .form-field legend {
-  color: var(--logo_blue); 
+  color: var(--logo-blue); 
   font-weight: 600;
   font-size: 0.95rem;
 }
@@ -214,7 +225,7 @@ body {
 .form-field select:focus,
 .form-field textarea:focus {
   outline: none;
-  border-color: var(--logo_blue);
+  border-color: var(--logo-blue);
   box-shadow: 0 0 0 3px rgba(66, 49, 255, 0.2);
 }
 
@@ -235,7 +246,7 @@ body {
 }
 
 .btn-primary {
-  background-color: var(--logo_blue);
+  background-color: var(--logo-blue);
   color: white;
   border: none;
   padding: 0.8rem 2.5rem;
@@ -271,15 +282,10 @@ body {
 
 /*Sammy (author of index page)*/
 
-:root{
-  
-  --hover_color: #E3EBFA;
-  --logo_blue: #4231FF;
-  --background-color: #EEEEEE;
-}
+
 * {
     font-family: calibri, sans-serif;
-    color: #3D343A; /*same as logo*/
+    color: var(--logo-gray); /*same as logo*/
 
 }
 body {
@@ -291,7 +297,7 @@ nav a {
 display:inline-flex;
     text-decoration: none;
     padding: 0.2em 0.6em;
-    color:var(--hover_color);
+    color:var(--hover-color);
     background-color: #4231FF;
       line-height: 1;
   min-width: 4em;
@@ -304,18 +310,18 @@ align-items: center;
 
 }
 nav a:hover{
-  background-color:var(--hover_color);
-  color:var(--logo_blue);
+  background-color:var(--hover-color);
+  color:var(--logo-blue);
 }
 
 
 .navbar a[aria-current="page"] {
-  background-color:var(--white);
-  color:var(--logo_blue);
+  background-color:transparent;
+  color:var(--logo-blue);
 }
 .navbar  a[aria-current="page"]:hover{
-  background-color:var(--hover_color);
-  color:var(--logo_blue);
+  background-color:var(--hover-color);
+  color:var(--logo-blue);
 }
 
 .navbar {
@@ -328,7 +334,7 @@ nav a:hover{
     padding:1rem;
     /*background-color:white;*/
     border-radius: 2rem;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, size 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 
 
 
@@ -360,7 +366,7 @@ nav a:hover{
 .navbar .searchbar input{
 font-size: large;
 border-radius: 2em;
-    border: 2% groove var(--logo_blue);
+    border: 2% groove var(--logo-blue);
 
 
 }
@@ -399,6 +405,7 @@ opacity:0;
 .contact{
   display:flex;
   justify-content: center;
+  list-style: none;
 }
 
 img {
@@ -406,21 +413,18 @@ img {
 
 }
 
-/*More universal settings: Not specific to navbar*/
-main{
-  padding: 2rem;
-}
+
 /* --- About Page Specifics (Ziad) --- */
 section h2 {
-  color: var(--logo_blue);
-  border-bottom: 2px solid var(--hover_color);
+  color: var(--logo-blue);
+  border-bottom: 2px solid var(--hover-color);
   padding-bottom: 0.5rem;
   margin-top: 2rem;
 }
 
 dl dt {
   font-size: 1.2rem;
-  color: var(--logo_blue);
+  color: var(--logo-blue);
   margin-top: 1.5rem;
 }
 
@@ -431,15 +435,18 @@ dl dd {
 
 blockquote {
   background-color: white;
-  border-left: 4px solid var(--logo_blue);
+  border-left: 4px solid var(--logo-blue);
   padding: 1rem;
   margin: 1rem 0;
   border-radius: 0 8px 8px 0;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-
-/*footer*/
+/*More universal settings: Not specific to navbar -- sammy*/
+main{
+  padding: 2rem;
+}
+/*footer -- sammy*/
 .footer {
     /* box-sizing so the padding counts INSIDE the 1100px, which makes
        the footer's left edge line up with the navbar and main */
@@ -448,7 +455,7 @@ blockquote {
     margin: 3rem auto 2rem;
     padding: 2rem clamp(1rem, 4vw, 2.5rem) 1.5rem;
     background-color: #ffffff;
-    border-top: 4px solid var(--logo_blue);
+    border-top: 4px solid var(--logo-blue);
     border-radius: 2rem;
     box-shadow: 0 0.5vw 1vw #4231ff40;
 }
@@ -459,7 +466,7 @@ blockquote {
     min-width: 0;
     font-size: 1rem;
     line-height: 1.4;
-    color:  var(--dark_text);
+    color:  var(--dark-text);
     background-color: transparent;
     border-radius: 0;
     text-decoration: underline;
@@ -470,10 +477,10 @@ blockquote {
     padding: 0.9rem 1.1rem;
     font-size: .9em;
     line-height: 1.5;
-    color: var(--dark_text);
+    color: var(--dark-text);
     background-color: #f5f4ff;
     border-left-width: 4px;
-    border-left: solid var(--logo_blue);
+    border-left: solid var(--logo-blue);
     border-radius: 0 1rem 1rem 0;
 }
 .contact-us{
@@ -481,4 +488,69 @@ blockquote {
   justify-self: center;
  margin: 0 auto;
 
+}
+
+/* Tables (shared by index and about) */
+.data-table {
+  width: 100%;
+  max-width: 1100px;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid #E0E0E0;
+  margin: 0 auto 2rem;
+}
+
+.data-table caption {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: var(--logo-blue);
+}
+
+.data-table th,
+.data-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #E0E0E0;
+  text-align: left;
+}
+
+.data-table thead {
+  background-color: var(--logo-blue);
+}
+
+.data-table thead th {
+  color: white;
+  font-weight: bold;
+}
+
+.data-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.data-table tbody td:hover {
+  background-color: var(--hover-color);
+}
+.data-table tbody th:hover {
+  background-color: var(--hover-color);
+}
+
+/* mobile compatibility for tables and footer */
+@media (max-width: 768px) {
+  /* Wide tables scroll on small screens */
+  .table-scroll {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  
+  nav a {
+    font-size: clamp(0.7rem, 4vw, 2rem);
+  }
+  .contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
