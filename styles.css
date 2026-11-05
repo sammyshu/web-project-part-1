@@ -97,11 +97,7 @@ body {
 .search-bar input {
   border: none;
   padding: 0.5rem 1rem;
-<<<<<<< HEAD
-  padding-left: 2.5rem; 
-=======
   padding-left: 2.5rem; /* Keep the label text clear of the search icon */
->>>>>>> 2eed8ea53200d9dbbb32821a52110dea849f4718
   border-radius: 30px;
   width: 220px;
   outline: none; 
@@ -127,7 +123,7 @@ body {
   background-color: #3326BE;
 }
 
-
+/* --- 3. Layout & Hero Box --- */
 .container {
   max-width: 1100px;
   margin: 0 auto;
@@ -169,7 +165,7 @@ body {
   color: #C9C4FF; 
 }
 
-
+/* --- 4. The Form Section --- */
 #form-heading {
   text-align: left;
   margin-bottom: 1rem;
