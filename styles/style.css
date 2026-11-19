@@ -102,7 +102,7 @@ body {
   width: 220px;
   outline: none; 
   font-family: inherit;
-  background-image: url("img/search-icon.png");
+  background-image: url("images/search-icon.png");
   background-repeat: no-repeat;
   background-position: 10px center;
   background-size: 1em 1em;
@@ -378,7 +378,7 @@ border-radius: 2em;
 
 
   padding-left:2em;
-  background-image: url("img/search-icon.png");
+  background-image: url("images/search-icon.png");
   background-repeat: no-repeat;
   background-position: 10px center;
   background-size: 1em 1em;   
