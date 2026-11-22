@@ -87,49 +87,49 @@
           <a href="mailto:careers@matchfit.com.au">careers@matchfit.com.au</a>.
         </p>
 
-        <form class="apply-form" action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
+        <form class="apply-form" action="process_eoi.php" method="post" novalidate>
 
           <div class="form-field">
             <label for="job-ref">Job reference number <span class="required">*</span></label>
-            <input type="text" id="job-ref" name="job_ref" required maxlength="5" pattern="[A-Za-z0-9]{5}" placeholder="e.g. MF204" autocomplete="off">
+            <input type="text" id="job-ref" name="job_ref"  maxlength="5" placeholder="e.g. MF204" autocomplete="off">
           </div>
 
           <div class="form-field">
             <label for="first-name">First name <span class="required">*</span></label>
-            <input type="text" id="first-name" name="first_name" required maxlength="20" autocomplete="given-name" pattern="[A-Za-z][A-Za-z' \-]{0,19}">
+            <input type="text" id="first-name" name="first_name" maxlength="20" autocomplete="given-name" >
           </div>
 
           <div class="form-field">
             <label for="last-name">Last name <span class="required">*</span></label>
-            <input type="text" id="last-name" name="last_name" required maxlength="20" autocomplete="family-name" pattern="[A-Za-z][A-Za-z' \-]{0,19}">
+            <input type="text" id="last-name" name="last_name" maxlength="20" autocomplete="family-name" >
           </div>
 
           <div class="form-field">
             <label for="dob">Date of birth (dd/mm/yyyy) <span class="required">*</span></label>
-            <input type="text" id="dob" name="dob" required placeholder="dd/mm/yyyy" pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/[0-9]{4}">
+            <input type="text" id="dob" name="dob" placeholder="dd/mm/yyyy" >
           </div>
 
           <fieldset class="form-field form-field--full">
             <legend>Gender <span class="required">*</span></legend>
             <div class="choice-group">
-              <label><input type="radio" name="gender" value="male" required> Male</label>
+              <label><input type="radio" name="gender" value="male" > Male</label>
               <label><input type="radio" name="gender" value="female"> Female</label>
             </div>
           </fieldset>
 
           <div class="form-field form-field--full">
             <label for="street">Street address <span class="required">*</span></label>
-            <input type="text" id="street" name="street" required maxlength="40" autocomplete="address-line1">
+            <input type="text" id="street" name="street" maxlength="40" autocomplete="address-line1">
           </div>
 
           <div class="form-field">
             <label for="suburb">Suburb or town <span class="required">*</span></label>
-            <input type="text" id="suburb" name="suburb" required maxlength="40" autocomplete="address-level2">
+            <input type="text" id="suburb" name="suburb" maxlength="40" autocomplete="address-level2">
           </div>
 
           <div class="form-field">
             <label for="state">State <span class="required">*</span></label>
-            <select id="state" name="state" required>
+            <select id="state" name="state">
               <option value="">Select a state</option>
               <option value="VIC">VIC</option>
               <option value="NSW">NSW</option>
@@ -144,28 +144,28 @@
 
           <div class="form-field">
             <label for="postcode">Postcode <span class="required">*</span></label>
-            <input type="text" id="postcode" name="postcode" required maxlength="4" pattern="[0-9]{4}" autocomplete="postal-code">
+            <input type="text" id="postcode" name="postcode" maxlength="4"  autocomplete="postal-code">
           </div>
 
           <div class="form-field">
             <label for="email">Email address <span class="required">*</span></label>
-            <input type="email" id="email" name="email" required placeholder="you@example.com" autocomplete="email">
+            <input type="text" id="email" name="email"  placeholder="you@example.com" autocomplete="email">
           </div>
 
           <div class="form-field">
             <label for="phone">Phone number <span class="required">*</span></label>
-            <input type="tel" id="phone" name="phone" required pattern="[0-9]{8,12}" autocomplete="tel">
+            <input type="text" id="phone" name="phone"  autocomplete="tel">
           </div>
 
           <fieldset class="form-field form-field--full">
             <legend>Skills <span class="required">*</span></legend>
             <div class="choice-group">
-              <label><input type="checkbox" name="skills" value="html-css" required> HTML and CSS</label>
-              <label><input type="checkbox" name="skills" value="javascript" required> JavaScript</label>
-              <label><input type="checkbox" name="skills" value="ui-design" required> UI and UX Design</label>
-              <label><input type="checkbox" name="skills" value="database" required> Database and SQL</label>
-              <label><input type="checkbox" name="skills" value="content" required> Content writing</label>
-              <label><input type="checkbox" name="skills" value="project-management" required> Project management</label>
+              <label><input type="checkbox" name="skills[]" value="html-css" > HTML and CSS</label>
+              <label><input type="checkbox" name="skills[]" value="javascript" > JavaScript</label>
+              <label><input type="checkbox" name="skills[]" value="ui-design" > UI and UX Design</label>
+              <label><input type="checkbox" name="skills[]" value="database" > Database and SQL</label>
+              <label><input type="checkbox" name="skills[]" value="content" > Content writing</label>
+              <label><input type="checkbox" name="skills[]" value="project-management" > Project management</label>
             </div>
           </fieldset>
 
