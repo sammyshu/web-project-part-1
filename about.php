@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content="Meet the team behind the MatchFit website"/>
     <meta name="author" content="Group 7"/>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/style.css">
     <title>About Us | MatchFit Sports</title>
 
     <!-- Page-specific styles -->
@@ -42,24 +45,8 @@
     </style>
 </head>
 <body>
-    <!-- Your Requested Navbar -->
-    <header>
-        <nav class="navbar">
-                <img src="img/logo.png" alt="logo" width="100">
 
-                <a href="index.html">Home</a>
-                <a href="jobs.html">Jobs</a>
-                <a href="apply.html">Apply</a>
-                <a href="about.html" aria-current="page">About</a>
-                <form class="searchbar">
-                        <!--The label is for screenreaders only because the background image (a search icon) and placeholder text already indicate the purpose of the field.-->
-                        <label for="search" class="for-screenreader">Search bar</label>
-                        <input type="text" id="search" name="search" placeholder="Search for something..." />
-                        <label for="go" class="for-screenreader">Submit Search</label>
-                        <input type="submit" id ="go" value="Go"/>
-                </form>
-        </nav>
-    </header>
+<?php require_once __DIR__ . '/header.inc'; ?>
 
     <main id="main-content">
         <div class="container">
@@ -68,7 +55,6 @@
                 We are Group 7, the minds behind the MatchFit Sports website. We worked together to design, build, and test a complete web experience.
             </p>
 
-            <!-- Group Details (Nested List) -->
             <section aria-labelledby="group-heading">
                 <h2 id="group-heading">Group details</h2>
                 <ul>
@@ -84,13 +70,18 @@
             <!-- Group Photo -->
             <figure class="group-photo">
                 <!-- Group photo -->
-                <img src="img/group_picture.jpeg" alt="A photo of Group 7 all together" width="500" height="360">
+                <img src="images/group_picture.jpeg" alt="A photo of Group 7 all together" width="500" height="360">
                 <figcaption>Group 7 - The MatchFit Team</figcaption>
             </figure>
 
             <!-- Member Contributions and Quotes (All Arabic) -->
             <section aria-labelledby="members-heading">
                 <h2 id="members-heading">Contributions</h2>
+                <?php if ($members): ?>
+             <!-- TODO: Loop through the members and display their contributions -->
+                <?php else: ?> <!-- Fall back -->
+
+
                 <dl>
                     <!-- Mayasa -->
                     <dt>Mayasa <span class="student-id">ID: 106242824</span></dt>
@@ -132,9 +123,8 @@
                         </blockquote>
                     </dd>
                 </dl>
+<?php endif; ?>
             </section>
-
-            <!-- Fun Facts Table -->
             <section aria-labelledby="table-heading"> 
                 <h2 id="table-heading">Fun Facts</h2>
                 <div class="table-scroll">
@@ -178,36 +168,12 @@
                 </div>
             </section>
 
-<<<<<<< HEAD
-            
-=======
->>>>>>> 2eed8ea53200d9dbbb32821a52110dea849f4718
             <p style="text-align: center; font-style: italic; color: #606060; margin: 3rem 0;">
                 Thanks for getting to know Group 7!
             </p>
 
         </div>
     </main>
-
-    <!-- Standard Footer -->
-        <footer>
-            <nav class = "footer">
-                <h2 class = "contact-us">Contact us:</h2>
-                <ul class = "contact">
-                    <li><a class = "footer-link" href="https://somting.atlassian.net/jira/software/projects/WP/boards/2">Jira</a></li>
-                    <li><a class = "footer-link" href="https://github.com/sammyshu/web-project-part-1">Github</a></li>
-                    <li><a class = "footer-link" href="https://sammyshu.github.io/web-project-part-1/">Live site</a></li>
-                    <li><a class = "footer-link" href="mailto:info@matchfit.com">Email</a></li>
-                </ul>
-            <p class="footer-acknowledgement">
-                <strong>Acknowledgement of Country:</strong> MatchFit Sports acknowledges the
-                Traditional Custodians of the lands on which we work and train.
-                We are committed to making sport welcoming for Aboriginal and Torres Strait
-                Islander peoples, and we encourage applications from First Nations candidates
-                for every role we advertise.
-            </p>
-            <p>&copy; 2026 MatchFit Sports. All rights reserved. Group7's project for COS10026.</p>
-            </nav>
-        </footer>
+        <?php require __DIR__ . '/footer.inc'; ?>
 </body>
 </html>

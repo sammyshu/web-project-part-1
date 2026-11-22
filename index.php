@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 <!-- 
-     index.html (home page)
+     index.php (home page)
      Written by Sammy Alabsi
      COS10026 Web Technology Project, Group 7
      Website design inspired by AirBNB and Stripe. The Hero section was inspired by Stripe,
@@ -12,7 +12,7 @@
         <meta charset="UTF-8"/>
         <meta name = "description" content="Sports & Fitness Main Page">
         <meta name="author" content="Group 7"/>
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="styles/style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <style>
 :root{
@@ -90,23 +90,7 @@
         <title>MatchFit Sports</title>
     </head>
     <body>
-        <header>
-            <nav class="navbar">
-                    <img src="img/logo.png" alt="logo" width="100">
-
-                    <a href="index.html" aria-current="page">Home</a>
-                    <a href="jobs.html">Jobs</a>
-                    <a href="apply.html">Apply</a>
-                    <a href="about.html">About</a>
-                    <form class = "searchbar">
-                        <!--The label is for screenreaders only because the background image (a search icon) and placeholder text already indicate the purpose of the field.-->
-                        <label for="search" class="for-screenreader">Search bar</label>
-                        <input type="text" id="search" name="search" placeholder="Search for something..." />
-                        <label for="go" class="for-screenreader">Submit Search</label>
-                        <input type="submit" id ="go" value="Go"/>
-                    </form>
-            </nav>
-        </header>
+    <?php require_once __DIR__ . '/header.inc'; ?>
         <main>
         <div class = "container">
         <div class="hero-section">
@@ -117,7 +101,7 @@
                 and fitness tracking apps, for members, coaches, and clubs to stay 
                 integrated with the technological world.</p>
                 
-                <a href="apply.html">Apply for a job</a>
+                <a href="apply.php">Apply for a job</a>
 
         </div>
         
@@ -170,25 +154,7 @@
         </div>
         </main>
         
-        <footer>
-            <nav class = "footer">
-                <h2 class = "contact-us">Contact us:</h2>
-                <ul class = "contact">
-                    <li><a class = "footer-link" href="https://somting.atlassian.net/jira/software/projects/WP/boards/2">Jira</a></li>
-                    <li><a class = "footer-link" href="https://github.com/sammyshu/web-project-part-1">Github</a></li>
-                    <li><a class = "footer-link" href="https://sammyshu.github.io/web-project-part-1/">Live site</a></li>
-                    <li><a class = "footer-link" href="mailto:info@matchfit.com">Email</a></li>
-                </ul>
-            <p class="footer-acknowledgement">
-                <strong>Acknowledgement of Country:</strong> MatchFit Sports acknowledges the
-                Traditional Custodians of the lands on which we work and train.
-                We are committed to making sport welcoming for Aboriginal and Torres Strait
-                Islander peoples, and we encourage applications from First Nations candidates
-                for every role we advertise.
-            </p>
-            <p>&copy; 2026 MatchFit Sports. All rights reserved. Group7's project for COS10026.</p>
-            </nav>
-        </footer>
+        <?php require __DIR__ . '/footer.inc'; ?>
         
     </body>
 </html>
