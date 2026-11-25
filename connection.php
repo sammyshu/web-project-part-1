@@ -21,10 +21,13 @@ id | name | email
 
 then the $data will contain [['id':1, 'name':'sam', 'sam@gmail.com'], ['id':2, 'name':'fam', 'fam@gmail.com']]
 
+
 ?>
 
-*/
+
+
 require_once 'settings.php';
+
 
 function connect_to_db_and_retrieve_data($query, $this_file) {
 
@@ -57,3 +60,11 @@ function connect_to_db_and_retrieve_data($query, $this_file) {
 }
 
 
+*/
+
+
+function connect_to_db_and_retrieve_data($query, $this_file){
+
+die("This function is deprecated because it didn't use prepared statements. Please write your own connection code. You can try and use one of my helper functions from settings.php.");
+
+}
